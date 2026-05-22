@@ -91,6 +91,15 @@ Run lint:
 pnpm lint
 ```
 
+Configure PostHog analytics and session replay:
+
+```bash
+NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN=<ph_project_token>
+NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
+```
+
+Add the same variables to the production hosting environment. Session replay must also be enabled for the PostHog project.
+
 Build for production:
 
 ```bash
