@@ -15,3 +15,4 @@ _Founded and run by Alexander Chen._
 
 - [TypeChinese](https://typechinese.io) - Chinese typing practice and typing tests
 - [Orb UI](https://orb-ui.com/) - open-source component library for voice agents
+- [badminton.fyi](https://badminton.fyi/) - searchable badminton racket database for specs, prices, and popularity signals
