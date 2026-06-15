@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { WorkspaceShell } from "@/components/ide/WorkspaceShell";
 import { contentPageRoutes, contentRouteForSlug } from "@/features/workspace/contentRoutes";
+import { siteDescription, siteName, socialImage } from "../site";
 
 interface ContentPageProps {
   params: Promise<{
@@ -24,7 +25,24 @@ export async function generateMetadata({ params }: ContentPageProps): Promise<Me
   }
 
   return {
-    title: `${route.title} | Experimental Software`,
+    title: route.title,
+    alternates: {
+      canonical: route.route,
+    },
+    openGraph: {
+      title: route.title,
+      description: siteDescription,
+      url: route.route,
+      siteName,
+      images: [socialImage],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: route.title,
+      description: siteDescription,
+      images: [socialImage.url],
+    },
   };
 }
 

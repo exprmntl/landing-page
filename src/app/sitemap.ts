@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { contentPageRoutes } from "@/features/workspace/contentRoutes";
-
-const siteUrl = "https://experimental.software";
+import { siteUrl } from "./site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return contentPageRoutes.map((route) => ({

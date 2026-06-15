@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
+import { siteDescription, siteName, siteUrl, socialImage } from "./site";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.experimental.software"),
+  metadataBase: siteUrl,
   title: {
-    default: "Experimental Software",
-    template: "%s | Experimental Software",
+    default: siteName,
+    template: `%s | ${siteName}`,
   },
-  description: "A software lab building tools, products, and internet experiments.",
+  description: siteDescription,
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
@@ -16,25 +20,18 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   openGraph: {
-    title: "Experimental Software",
-    description: "A software lab building tools, products, and internet experiments.",
+    title: siteName,
+    description: siteDescription,
     url: "/",
-    siteName: "Experimental Software",
-    images: [
-      {
-        url: "/social.png",
-        width: 1731,
-        height: 909,
-        alt: "Experimental Software",
-      },
-    ],
+    siteName,
+    images: [socialImage],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Experimental Software",
-    description: "A software lab building tools, products, and internet experiments.",
-    images: ["/social.png"],
+    title: siteName,
+    description: siteDescription,
+    images: [socialImage.url],
   },
 };
 
