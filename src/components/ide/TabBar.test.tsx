@@ -74,6 +74,68 @@ describe("TabBar", () => {
     expect(onCloseTab).toHaveBeenCalledWith("repo:content/philosophy.md");
   });
 
+  it("closes tabs on middle click without selecting them", async () => {
+    const user = userEvent.setup();
+    const onSelectTab = vi.fn();
+    const onCloseTab = vi.fn();
+
+    renderTabBar({ onSelectTab, onCloseTab });
+
+    const tab = screen.getByRole("tab", { name: /philosophy.md/i });
+
+    fireEvent.contextMenu(tab, { clientX: 120, clientY: 80 });
+    expect(screen.getByRole("menu")).toBeInTheDocument();
+
+    // Autoscroll is a default action of mousedown, so cancelling it is observable as the return value.
+    expect(fireEvent.mouseDown(tab, { button: 1 })).toBe(false);
+
+    await user.pointer({ keys: "[MouseMiddle]", target: tab });
+
+    expect(onCloseTab).toHaveBeenCalledTimes(1);
+    expect(onCloseTab).toHaveBeenCalledWith("repo:content/philosophy.md");
+    expect(onSelectTab).not.toHaveBeenCalled();
+    expect(screen.queryByRole("menu")).not.toBeInTheDocument();
+
+    // Pre-18.2 WebKit also fires a plain click for the middle button; it must not reopen the tab.
+    fireEvent.click(tab, { button: 1 });
+    expect(onSelectTab).not.toHaveBeenCalled();
+  });
+
+  it("requires a matching middle mousedown before closing on mouseup", () => {
+    const onCloseTab = vi.fn();
+
+    renderTabBar({ onCloseTab });
+
+    const readmeTab = screen.getByRole("tab", { name: /README.md/i });
+    const philosophyTab = screen.getByRole("tab", { name: /philosophy.md/i });
+
+    fireEvent.mouseUp(philosophyTab, { button: 1 });
+    fireEvent.mouseDown(readmeTab, { button: 1 });
+    fireEvent.mouseUp(philosophyTab, { button: 1 });
+    fireEvent.mouseDown(document.body, { button: 1 });
+    fireEvent.mouseUp(philosophyTab, { button: 1 });
+
+    expect(onCloseTab).not.toHaveBeenCalled();
+
+    fireEvent.mouseDown(philosophyTab, { button: 1 });
+    fireEvent.mouseUp(philosophyTab, { button: 1 });
+
+    expect(onCloseTab).toHaveBeenCalledWith("repo:content/philosophy.md");
+  });
+
+  it("closes the tab without selecting it when the close button is clicked", async () => {
+    const user = userEvent.setup();
+    const onSelectTab = vi.fn();
+    const onCloseTab = vi.fn();
+
+    renderTabBar({ onSelectTab, onCloseTab });
+
+    await user.click(screen.getByLabelText("Close philosophy.md"));
+
+    expect(onCloseTab).toHaveBeenCalledWith("repo:content/philosophy.md");
+    expect(onSelectTab).not.toHaveBeenCalled();
+  });
+
   it("pins tabs on double click", async () => {
     const user = userEvent.setup();
     const onPinTab = vi.fn();
