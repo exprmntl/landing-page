@@ -2,7 +2,7 @@
 
 import { X } from "lucide-react";
 import { clsx } from "clsx";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { SetiFileIcon } from "./SetiFileIcon";
 import type { WorkspaceFile } from "@/features/workspace/types";
 
@@ -46,9 +46,26 @@ export function TabBar({
   const [contextMenu, setContextMenu] = useState<TabContextMenuState | null>(null);
   const [draggedFileId, setDraggedFileId] = useState<string | null>(null);
   const [dropIndicator, setDropIndicator] = useState<DropIndicatorState | null>(null);
+  const middleMouseDownFileId = useRef<string | null>(null);
   const contextFile = contextMenu ? tabs.find((tab) => tab.id === contextMenu.fileId) : null;
   const contextFileIndex = contextFile ? tabs.findIndex((tab) => tab.id === contextFile.id) : -1;
   const hasTabsToRight = contextFileIndex >= 0 && contextFileIndex < tabs.length - 1;
+
+  useEffect(() => {
+    const clearMiddleMouseDown = (event: MouseEvent) => {
+      if (event.button === 1) {
+        middleMouseDownFileId.current = null;
+      }
+    };
+
+    window.addEventListener("mousedown", clearMiddleMouseDown, true);
+    window.addEventListener("mouseup", clearMiddleMouseDown);
+
+    return () => {
+      window.removeEventListener("mousedown", clearMiddleMouseDown, true);
+      window.removeEventListener("mouseup", clearMiddleMouseDown);
+    };
+  }, []);
 
   useEffect(() => {
     if (!contextMenu) {
@@ -145,8 +162,39 @@ export function TabBar({
                 dropIndicator?.fileId === file.id &&
                   (dropIndicator.side === "before" ? "drop-before" : "drop-after"),
               )}
-              onPointerDown={() => onSelectTab(file.id)}
-              onClick={() => onSelectTab(file.id)}
+              onPointerDown={(event) => {
+                // Only the primary button selects: middle closes, right just opens the menu,
+                // and the nested close button must not select the tab on its way to closing it.
+                if (event.button !== 0) {
+                  return;
+                }
+
+                onSelectTab(file.id);
+              }}
+              onMouseDown={(event) => {
+                if (event.button === 1) {
+                  event.preventDefault();
+                  middleMouseDownFileId.current = file.id;
+                }
+              }}
+              onMouseUp={(event) => {
+                if (event.button === 1) {
+                  const shouldClose = middleMouseDownFileId.current === file.id;
+                  middleMouseDownFileId.current = null;
+
+                  if (shouldClose) {
+                    setContextMenu(null);
+                    onCloseTab(file.id);
+                  }
+                }
+              }}
+              onClick={(event) => {
+                // Pre-18.2 WebKit fires a plain click for the middle button, and openFile re-adds
+                // a closed file to openTabs, so an unguarded click reopens the tab we just closed.
+                if (event.button === 0) {
+                  onSelectTab(file.id);
+                }
+              }}
               onDoubleClick={() => onPinTab(file.id)}
               onContextMenu={(event) => {
                 event.preventDefault();
@@ -193,6 +241,11 @@ export function TabBar({
                 tabIndex={0}
                 aria-label={`Close ${file.name}`}
                 className="tab-close"
+                onPointerDown={(event) => {
+                  // Without this the tab's onPointerDown activates the file we are closing,
+                  // which makes the reducer hand focus to the last tab instead of leaving it put.
+                  event.stopPropagation();
+                }}
                 onClick={(event) => {
                   event.stopPropagation();
                   onCloseTab(file.id);
