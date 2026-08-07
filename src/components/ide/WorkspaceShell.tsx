@@ -44,7 +44,7 @@ const defaultExplorerWidth = 288;
 const minExplorerWidth = 168;
 const maxExplorerWidth = 520;
 const resizeKeyboardStep = 16;
-const githubRepoUrl = "https://github.com/Experimental-Software-Studio/landing-page";
+const githubRepoUrl = "https://github.com/exprmntl/landing-page";
 const mobileSidebarQuery = "(max-width: 820px)";
 type SidebarMode = "auto" | "open" | "closed";
 
@@ -137,7 +137,7 @@ export function WorkspaceShell({ initialFileId }: WorkspaceShellProps) {
       {
         id: "github.open-repository",
         label: "GitHub: Open Repository",
-        detail: "Experimental-Software-Studio/landing-page",
+        detail: "exprmntl/landing-page",
         run: () => window.open(githubRepoUrl, "_blank", "noopener,noreferrer"),
       },
       {

@@ -21,7 +21,7 @@ function fetchHistory(args: string[]) {
 
 const vercelBranch = process.env.VERCEL_GIT_COMMIT_REF;
 const vercelRepoOwner =
-  process.env.VERCEL_GIT_REPO_OWNER ?? process.env.VERCEL_GIT_ORG ?? "Experimental-Software-Studio";
+  process.env.VERCEL_GIT_REPO_OWNER ?? process.env.VERCEL_GIT_ORG ?? "exprmntl";
 const vercelRepoSlug =
   process.env.VERCEL_GIT_REPO_SLUG ?? process.env.VERCEL_GIT_REPO ?? "landing-page";
 const isShallowRepository = tryGit(["rev-parse", "--is-shallow-repository"]);

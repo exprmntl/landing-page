@@ -2,6 +2,6 @@
 
 Email: [hello@experimental.software](mailto:hello@experimental.software)
 
-GitHub: [Experimental-Software-Studio](https://github.com/Experimental-Software-Studio)
+GitHub: [exprmntl](https://github.com/exprmntl)
 
 X: [@alexanderqchen](https://x.com/alexanderqchen)
