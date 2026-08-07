@@ -10,7 +10,7 @@ function renderCommandPalette(overrides: Partial<{ commands: CommandPaletteComma
     {
       id: "github.open-repository",
       label: "GitHub: Open Repository",
-      detail: "Experimental-Software-Studio/landing-page",
+      detail: "exprmntl/landing-page",
       run: openGitHub,
     },
     {
