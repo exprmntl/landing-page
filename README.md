@@ -14,6 +14,7 @@ The Next.js App Router entry points live in `src/app`.
 - `src/app/[slug]/page.tsx` renders content routes like `/projects`, `/website`, `/about`, and `/contact`
 - `src/app/layout.tsx` defines page metadata, favicons, and social cards
 - `src/app/globals.css` contains the VS Code-inspired visual system
+- `src/app/brand/page.tsx` renders the White Room brand guide at `/brand`; see [the brand implementation notes](docs/brand.md) for reusable styling and components
 
 ### IDE UI
 
