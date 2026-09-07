@@ -14,6 +14,7 @@
     "prepare:git-history": "node --import tsx scripts/ensure-git-history.ts"
   },
   "dependencies": {
+    "@base-ui/react": "^1.8.0",
     "@codemirror/commands": "^6.10.3",
     "@codemirror/lang-css": "latest",
     "@codemirror/lang-html": "latest",
@@ -28,6 +29,7 @@
     "@peoplesgrocers/seti-ui-file-icons": "^1.11.3",
     "@replit/codemirror-indentation-markers": "^6.5.3",
     "@uiw/codemirror-theme-vscode": "^4.25.9",
+    "class-variance-authority": "^0.7.1",
     "clsx": "latest",
     "lucide-react": "latest",
     "next": "latest",
@@ -39,6 +41,7 @@
     "remark-gfm": "latest",
     "remark-parse": "latest",
     "remark-rehype": "latest",
+    "tailwind-merge": "^3.6.0",
     "unified": "latest"
   },
   "devDependencies": {
