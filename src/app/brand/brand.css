@@ -49,7 +49,7 @@
   font-size: 22px;
   line-height: 0.96;
   font-weight: 500;
-  letter-spacing: -0.045em;
+  letter-spacing: var(--brand-wordmark-tracking);
 }
 .brand-header-title,
 .brand-eyebrow,
@@ -135,7 +135,7 @@
   margin-top: 25px;
   font-size: clamp(56px, 6.5vw, 96px);
   line-height: 0.97;
-  letter-spacing: -0.065em;
+  letter-spacing: var(--brand-display-tracking);
 }
 .brand-intro-copy {
   padding-bottom: 6px;
@@ -166,7 +166,7 @@
 }
 .brand-section-heading h2 {
   font-size: clamp(28px, 3vw, 40px);
-  letter-spacing: -0.045em;
+  letter-spacing: var(--brand-display-tracking);
   line-height: 1.1;
   margin-top: 12px;
 }
@@ -209,7 +209,7 @@
   font-size: clamp(26px, 2.9vw, 42px);
   font-weight: 500;
   line-height: 0.97;
-  letter-spacing: -0.045em;
+  letter-spacing: var(--brand-wordmark-tracking);
 }
 .brand-specimen-caption {
   position: absolute;
@@ -246,12 +246,12 @@
 }
 .brand-type-alphabet {
   font-size: clamp(72px, 10vw, 145px);
-  letter-spacing: -0.065em;
+  letter-spacing: var(--brand-display-tracking);
   line-height: 1.35;
 }
 .brand-type-sentence {
   font-size: clamp(22px, 3vw, 42px);
-  letter-spacing: -0.045em;
+  letter-spacing: var(--brand-display-tracking);
 }
 .brand-type-roles {
   display: grid;
@@ -262,7 +262,7 @@
 .brand-type-headline {
   font-size: 42px;
   line-height: 1.04;
-  letter-spacing: -0.065em;
+  letter-spacing: var(--brand-display-tracking);
   padding: 20px 0;
 }
 .brand-type-roles > div > p:last-child {
@@ -363,7 +363,7 @@
 .brand-project-cover h3 {
   font-size: 72px;
   line-height: 1.1;
-  letter-spacing: -0.06em;
+  letter-spacing: var(--brand-display-tracking);
   margin: 8px 0 12px;
 }
 .brand-project-cover > p {
@@ -382,7 +382,7 @@
 }
 .brand-application-notes h3 {
   font-size: 30px;
-  letter-spacing: -0.04em;
+  letter-spacing: var(--brand-display-tracking);
   margin: 15px 0;
 }
 .brand-application-notes p {

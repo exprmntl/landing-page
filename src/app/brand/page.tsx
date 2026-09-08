@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowDown, ArrowUpRight, Download } from "lucide-react";
 import { Outlier } from "@/components/brand/Outlier";
 import { ComponentPlayground } from "@/components/brand/ComponentPlayground";
+import { whiteRoomFonts } from "@/styles/brand-fonts";
 import "./brand.css";
 
 export const metadata: Metadata = {
@@ -44,7 +45,7 @@ function SectionTitle({
 
 export default function BrandPage() {
   return (
-    <div className="brand-theme brand-guide" id="top">
+    <div className={`${whiteRoomFonts} brand-theme brand-guide`} id="top">
       <a className="brand-skip" href="#brand-content">
         Skip to the guide
       </a>
@@ -77,7 +78,7 @@ export default function BrandPage() {
             <span className="brand-status-dot" />
             WHITE ROOM
             <br />
-            <span>Version 1.0 / Sep 2026</span>
+            <span>Version 1.1 / Sep 2026</span>
           </div>
         </aside>
         <main className="brand-content" id="brand-content">
@@ -94,7 +95,7 @@ export default function BrandPage() {
               </h1>
             </div>
             <div className="brand-intro-copy">
-              <span className="brand-eyebrow">THE BRAND GUIDE / 1.0</span>
+              <span className="brand-eyebrow">THE BRAND GUIDE / 1.1</span>
               <p>
                 A clear frame for curious work.
                 <br />
@@ -164,11 +165,11 @@ export default function BrandPage() {
             <SectionTitle
               number="02"
               title="One voice. Two fonts."
-              description="Helvetica Neue does the speaking. Menlo adds the small, precise details. Hierarchy comes from scale and spacing."
+              description="General Sans does the speaking. Meslo LG S adds the small, precise details. Hierarchy comes from scale and spacing."
             />
             <div className="brand-type-main">
               <div className="brand-type-heading">
-                <span className="brand-eyebrow">PRIMARY / HELVETICA NEUE</span>
+                <span className="brand-eyebrow">PRIMARY / GENERAL SANS</span>
                 <span className="brand-eyebrow">REGULAR 400 · MEDIUM 500</span>
               </div>
               <div className="brand-type-alphabet">Aa Bb Cc</div>
@@ -183,9 +184,9 @@ export default function BrandPage() {
                   for what’s next.
                 </h3>
                 <p>
-                  Large type. Tight spacing. Regular weight.
+                  Large type. Room to breathe. Regular weight.
                   <br />
-                  Display tracking: −0.065em.
+                  Display tracking: −0.03em.
                 </p>
               </div>
               <div>
@@ -198,13 +199,13 @@ export default function BrandPage() {
                 <p>
                   16px / 1.55 line height. Normal spacing.
                   <br />
-                  The wordmark uses Medium (500).
+                  The wordmark uses Medium (500), tracking −0.045em.
                 </p>
               </div>
             </div>
             <div className="brand-mono-specimen">
               <div>
-                <span className="brand-eyebrow">SUPPORTING / MENLO REGULAR</span>
+                <span className="brand-eyebrow">SUPPORTING / MESLO LG S REGULAR</span>
                 <p>
                   WORK / NOTES / ABOUT
                   <br />
@@ -219,10 +220,11 @@ export default function BrandPage() {
               </p>
             </div>
             <p className="brand-footnote">
-              Interface labels use 14px; secondary metadata uses 12px. This page uses
-              installed Helvetica Neue and Menlo, with Arial and monospace fallbacks. A
-              consistent public web release needs licensed webfonts; font files are not
-              included.
+              Interface labels use 14px; secondary metadata uses 12px. This page loads
+              General Sans and Meslo LG S as webfonts. Use Regular (400) for body text
+              and labels, and Medium (500) for the wordmark. See the{" "}
+              <a href="/brand/font-notes.txt">font setup and license notes</a> when
+              adopting these fonts in another project.
             </p>
           </section>
 

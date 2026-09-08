@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { whiteRoomFonts } from "@/styles/brand-fonts";
 import {
   Dialog,
   DialogContent,
@@ -18,11 +19,12 @@ import {
 const example = `import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
+import { whiteRoomFonts } from "@/styles/brand-fonts";
 import "@/styles/white-room.css";
 
 export function ProjectSettings() {
   return (
-    <div className="brand-theme brand-ui">
+    <div className={[whiteRoomFonts, "brand-theme brand-ui"].join(" ")}>
       <label htmlFor="project">Project name</label>
       <Input id="project" defaultValue="New experiment" />
       <label htmlFor="updates">Release updates</label>
@@ -83,7 +85,7 @@ export function ComponentPlayground() {
                 <DialogTrigger render={<Button />}>
                   Open a dialog <ArrowUpRight size={16} />
                 </DialogTrigger>
-                <DialogContent className="brand-theme brand-ui">
+                <DialogContent className={`${whiteRoomFonts} brand-theme brand-ui`}>
                   <DialogHeader>
                     <DialogTitle>Room for a decision.</DialogTitle>
                     <DialogDescription>
@@ -179,7 +181,8 @@ export function ComponentPlayground() {
             <div>
               <h3>Keep behavior. Add the brand.</h3>
               <p>
-                Use shadcn’s Base UI components, import the theme, and wrap your UI.
+                Use shadcn’s Base UI components, load the selected fonts, import the
+                theme, and wrap your UI.
                 Apply the same classes to dialog content rendered in a portal.
               </p>
             </div>
@@ -198,6 +201,7 @@ export function ComponentPlayground() {
             <a href="/brand/white-room.css" download>
               Download the theme ↓
             </a>
+            <a href="/brand/font-notes.txt">Font setup and license notes ↗</a>
             <a href="https://ui.shadcn.com/docs">shadcn documentation ↗</a>
             <a href="https://base-ui.com/react/overview/quick-start">
               Base UI documentation ↗

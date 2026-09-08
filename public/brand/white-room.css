@@ -1,7 +1,7 @@
-/* Experimental Software / White Room 1.0
+/* Experimental Software / White Room 1.1
    Apply .brand-theme to a root and .brand-ui to component groups and portals.
    Designed for shadcn/ui Base UI components with Tailwind CSS v4.
-   Helvetica Neue and Menlo are system references; no font files are bundled. */
+   General Sans 400/500 + Meslo LG S 400. Load fonts separately; see /brand/font-notes.txt. */
 @custom-variant dark (&:where(.dark, .dark *));
 @custom-variant data-horizontal (&[data-orientation="horizontal"]);
 @custom-variant data-vertical (&[data-orientation="vertical"]);
@@ -47,9 +47,12 @@
   --ring: #171715;
   --destructive: #a12b21;
   --radius: 0;
-  --brand-sans: "Helvetica Neue", Arial, sans-serif;
-  --brand-mono: Menlo, monospace;
+  --brand-sans: var(--font-white-room-sans, "General Sans"), sans-serif;
+  --brand-mono: var(--font-white-room-mono, "Meslo LG S"), monospace;
+  --brand-display-tracking: -0.03em;
+  --brand-wordmark-tracking: -0.045em;
   font-family: var(--brand-sans);
+  font-synthesis: none;
   background: var(--background);
   color: var(--foreground);
   color-scheme: light;
@@ -137,7 +140,7 @@
 }
 .brand-ui [data-slot="dialog-title"] {
   font: 400 30px/1.1 var(--brand-sans);
-  letter-spacing: -0.04em;
+  letter-spacing: var(--brand-display-tracking);
   padding-right: 20px;
 }
 .brand-ui [data-slot="dialog-description"] {
