@@ -1,0 +1,26 @@
+EXPERIMENTAL SOFTWARE / WHITE ROOM 1.1
+
+General Sans Regular 400: headlines, body text, and buttons.
+General Sans Medium 500: wordmark.
+Meslo LG S Regular 400: labels, metadata, and code.
+Headlines: -0.03em. Wordmark: -0.045em. Body: normal letter spacing.
+
+The brand page serves the selected fonts as webfonts. The downloadable CSS and
+JSON define the design choices but do not include font files. Other projects
+must obtain their own font files and apply the applicable terms.
+
+General Sans is free for commercial web use, self-hosting, and logos under the
+ITF Free Font License. Redistribution through public repositories and offering
+the font as a selectable authoring resource to third parties are restricted.
+Source: https://www.fontshare.com/fonts/general-sans
+Terms: https://www.fontshare.com/licenses/itf-ffl
+License copy: /brand/font-licenses/general-sans.txt
+
+Meslo LG S is distributed by its author under Apache 2.0 and has no purchase fee.
+It derives from Apple's Menlo and retains upstream copyright notices. The
+author's release does not establish all upstream Apple redistribution rights;
+that licensing question remains unresolved. Selection here is not a claim of
+legal clearance for every use or permission to redistribute the underlying font.
+Source: https://github.com/andreberg/Meslo-Font
+Notices: /brand/font-licenses/meslo-notices.txt
+Apache 2.0: /brand/font-licenses/apache-2.0.txt

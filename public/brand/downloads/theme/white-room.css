@@ -1,0 +1,156 @@
+/* Experimental Software / White Room 1.1
+   Apply .brand-theme to a root and .brand-ui to component groups and portals.
+   Designed for shadcn/ui Base UI components with Tailwind CSS v4.
+   General Sans 400/500 + Meslo LG S 400. Load fonts separately; see /brand/font-notes.txt. */
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant data-horizontal (&[data-orientation="horizontal"]);
+@custom-variant data-vertical (&[data-orientation="vertical"]);
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+}
+
+.brand-theme {
+  --background: #ffffff;
+  --foreground: #171715;
+  --primary: #d8ef45;
+  --primary-foreground: #171715;
+  --secondary: #f3f5ef;
+  --secondary-foreground: #171715;
+  --muted: #f3f5ef;
+  --muted-foreground: #62665e;
+  --accent: #f3f5ef;
+  --accent-foreground: #171715;
+  --popover: #ffffff;
+  --popover-foreground: #171715;
+  --card: #ffffff;
+  --card-foreground: #171715;
+  --border: #dde1d7;
+  --input: #75796f;
+  --ring: #171715;
+  --destructive: #a12b21;
+  --radius: 0;
+  --brand-sans: var(--font-white-room-sans, "General Sans"), sans-serif;
+  --brand-mono: var(--font-white-room-mono, "Meslo LG S"), monospace;
+  --brand-display-tracking: -0.03em;
+  --brand-wordmark-tracking: -0.045em;
+  font-family: var(--brand-sans);
+  font-synthesis: none;
+  background: var(--background);
+  color: var(--foreground);
+  color-scheme: light;
+}
+
+.brand-ui [data-slot="button"],
+.brand-ui [data-slot="dialog-trigger"],
+.brand-ui button[data-slot="dialog-close"] {
+  min-height: 44px;
+  padding: 10px 18px;
+  border-radius: 0;
+  font: 400 14px/1.4 var(--brand-sans);
+  gap: 12px;
+  box-shadow: none;
+}
+.brand-ui [data-slot="button"]:focus-visible,
+.brand-ui [data-slot="dialog-trigger"]:focus-visible,
+.brand-ui button[data-slot="dialog-close"]:focus-visible,
+.brand-ui [data-slot="input"]:focus-visible,
+.brand-ui [data-slot="switch"]:focus-visible,
+.brand-ui [data-slot="tabs-trigger"]:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 4px;
+  box-shadow: none;
+}
+.brand-ui [data-slot="input"] {
+  min-height: 44px;
+  border-radius: 0;
+  font: 400 16px/1.55 var(--brand-sans);
+  padding: 10px 12px;
+}
+.brand-ui [data-slot="input"]:disabled {
+  background: var(--secondary);
+}
+.brand-ui [data-slot="tabs-list"] {
+  border-radius: 0;
+  padding: 0;
+  min-height: 44px;
+  height: auto;
+  background: transparent;
+  gap: 24px;
+}
+.brand-ui [data-slot="tabs-trigger"] {
+  min-height: 44px;
+  border-radius: 0;
+  padding: 10px 0;
+  color: var(--muted-foreground);
+  font-weight: 400;
+  box-shadow: none;
+}
+.brand-ui [data-slot="tabs-trigger"][data-active] {
+  color: var(--foreground);
+}
+.brand-ui [data-slot="tabs-trigger"]::after {
+  bottom: 0;
+}
+.brand-ui [data-slot="switch"] {
+  width: 42px;
+  height: 24px;
+  border-radius: 0;
+  border: 1px solid var(--input);
+  justify-content: flex-start;
+}
+.brand-ui [data-slot="switch"][data-unchecked] {
+  background: var(--background);
+}
+.brand-ui [data-slot="switch-thumb"] {
+  width: 16px;
+  height: 16px;
+  border-radius: 0;
+  background: var(--foreground);
+  translate: none;
+}
+.brand-ui [data-slot="switch-thumb"][data-unchecked] {
+  transform: translateX(3px);
+}
+.brand-ui [data-slot="switch-thumb"][data-checked] {
+  transform: translateX(21px);
+}
+.brand-ui[data-slot="dialog-content"] {
+  padding: 32px;
+  border-radius: 0;
+  max-width: min(460px, calc(100% - 40px));
+  box-shadow: 0 16px 80px #17171524;
+}
+.brand-ui [data-slot="dialog-title"] {
+  font: 400 30px/1.1 var(--brand-sans);
+  letter-spacing: var(--brand-display-tracking);
+  padding-right: 20px;
+}
+.brand-ui [data-slot="dialog-description"] {
+  font-size: 16px;
+  line-height: 1.55;
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-ui *,
+  .brand-ui *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

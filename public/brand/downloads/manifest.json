@@ -1,0 +1,195 @@
+{
+  "version": "1.1",
+  "files": [
+    {
+      "file": "symbols/outlier-ink.svg",
+      "bytes": 291,
+      "sha256": "9c880ea66ae7ade3e34d1f9ab0ce6cb6f0609067f781be611f125f89194d3b66"
+    },
+    {
+      "file": "symbols/outlier-ink.png",
+      "bytes": 16188,
+      "sha256": "83212fb56f51ad522b513a6a633de9f5b126ad41c7af0c260735bd084bae1282"
+    },
+    {
+      "file": "logos/stacked-ink.svg",
+      "bytes": 5985,
+      "sha256": "86b1f526437ac1de3d0b4883026bfd676ea0d09e8005fcb9c9d2452dfc106864"
+    },
+    {
+      "file": "logos/stacked-ink.png",
+      "bytes": 39409,
+      "sha256": "75ca8f6d13f075537058beed18872ec2bb35a255854c03822f427ea6aaaeb605"
+    },
+    {
+      "file": "logos/horizontal-ink.svg",
+      "bytes": 5949,
+      "sha256": "3a3b2a5971ef872be56ac9876cd0dec4d0ee43f33d5976b831d66eee2d7011db"
+    },
+    {
+      "file": "logos/horizontal-ink.png",
+      "bytes": 42203,
+      "sha256": "63ab70bd4eb03650a531d6c871541dc439567b4b7d49344ac507ede95e131279"
+    },
+    {
+      "file": "logos/wordmark-ink.svg",
+      "bytes": 5869,
+      "sha256": "fb83988d55735aefca3e94b1ad6ebe5e8479b86b945ce14fcdea3890a4f5ddb8"
+    },
+    {
+      "file": "logos/wordmark-ink.png",
+      "bytes": 52084,
+      "sha256": "46755e4aeb14599f94f6713cf1dd79b70533d7c1b1b627286fe4d882891ab961"
+    },
+    {
+      "file": "symbols/outlier-white.svg",
+      "bytes": 291,
+      "sha256": "63431c5ad8e30bc49b4b65a435f1c7016f1ca3ad31e7dbfccdff28e1268c6ca7"
+    },
+    {
+      "file": "symbols/outlier-white.png",
+      "bytes": 12019,
+      "sha256": "9a326fe185830c8062ce28a0f476ef7ed4a3cde9f732213d416ce6198dfba99c"
+    },
+    {
+      "file": "logos/stacked-white.svg",
+      "bytes": 5985,
+      "sha256": "fd03cfa799358e4c3cbaf46df5f13b0b9b421dd7be5584fcf2a4660dd4bcc4bc"
+    },
+    {
+      "file": "logos/stacked-white.png",
+      "bytes": 33107,
+      "sha256": "dd4982904f71cb9a19d85bc2b6b019164db219515576df2eee286ce6dfb2f4b5"
+    },
+    {
+      "file": "logos/horizontal-white.svg",
+      "bytes": 5949,
+      "sha256": "682e4fb8ee668f2156518049733be4dce0a20228fa0614784afb754467ad6f56"
+    },
+    {
+      "file": "logos/horizontal-white.png",
+      "bytes": 36071,
+      "sha256": "91f91f12a6a2884192284eef5e5e560ecd300472c3b75c6567cbe02e23a5b387"
+    },
+    {
+      "file": "logos/wordmark-white.svg",
+      "bytes": 5869,
+      "sha256": "f12cf3732d5d71290040016d528732474dcad8a3919027088b4ccc8c6e5ca427"
+    },
+    {
+      "file": "logos/wordmark-white.png",
+      "bytes": 43613,
+      "sha256": "a4a3d3e8b037e4a74fb0a8247953e25846d7048e5f3f84758aa265ed42002882"
+    },
+    {
+      "file": "avatars/avatar-paper.svg",
+      "bytes": 380,
+      "sha256": "4e7f913695fc9aea3826d0b7c40f3e8c2fcc2dde4e53cd2ed363bd876dea572d"
+    },
+    {
+      "file": "avatars/avatar-paper.png",
+      "bytes": 6676,
+      "sha256": "47d793da22481caaed072030bf432e93709a1f9ac3ad5ec058c0dcc0f4026dee"
+    },
+    {
+      "file": "avatars/avatar-ink.svg",
+      "bytes": 380,
+      "sha256": "29d1b60fe44f9baf2abd301018f6bd87032182acef2c504b21e39dc101d7920a"
+    },
+    {
+      "file": "avatars/avatar-ink.png",
+      "bytes": 9750,
+      "sha256": "ebd58e15e798f50fcf9ac645367d085e6f5db98175e6ff068eecea80ed5451f6"
+    },
+    {
+      "file": "avatars/avatar-acid.svg",
+      "bytes": 380,
+      "sha256": "b76d42c4a05eeb6489eea670524618ce7d158ae08e93fd151f36acc32fb195bc"
+    },
+    {
+      "file": "avatars/avatar-acid.png",
+      "bytes": 9897,
+      "sha256": "34ae438fc42b4c888ff60134db15f42483bc874585dcc4dca0da75df2a864443"
+    },
+    {
+      "file": "social/experimental-software.svg",
+      "bytes": 17832,
+      "sha256": "cbf3b0005a80f0757408b422cb690fdd3a3377e0dfcc53776f0050bf39930de7"
+    },
+    {
+      "file": "social/experimental-software.png",
+      "bytes": 48548,
+      "sha256": "f100917cd4a515cd212d13a92971559698daf211f62e9f24f6ab42d926848531"
+    },
+    {
+      "file": "templates/repository-cover.svg",
+      "bytes": 27445,
+      "sha256": "0afa7d2f2d9fa901cddfef60d9ef4737494afeb5efb6e084fd2ed6e0c6cc6b4c"
+    },
+    {
+      "file": "templates/repository-cover.png",
+      "bytes": 34839,
+      "sha256": "b75521a587a8792200db568793723dbea5d5b4e64cdf29c759e1b798ea2c97e3"
+    },
+    {
+      "file": "favicons/favicon.svg",
+      "bytes": 314,
+      "sha256": "5188e3b4288a9f81c65d6e2c8d53639e2b36b1444a6ff5266842b2b2de163c25"
+    },
+    {
+      "file": "favicons/favicon-32x32.png",
+      "bytes": 320,
+      "sha256": "899c90fa357c6d6711b205d92c8bdbd62fd01dae1a61825ab68d00fc3646890a"
+    },
+    {
+      "file": "favicons/apple-touch-icon.png",
+      "bytes": 1833,
+      "sha256": "b85bf337d5327d05dabeacadd8de3a869afb35a84e145576333b82ab6bdfac55"
+    },
+    {
+      "file": "favicons/icon.png",
+      "bytes": 6889,
+      "sha256": "7442fc89586907e37fc578d563880db0abc38cae1672177c6de0b893580a1705"
+    },
+    {
+      "file": "favicons/favicon.ico",
+      "bytes": 1080,
+      "sha256": "f50312986ac26ddc51e46f03b40cadb585b592ac8f8672723574752ce9da28fe"
+    },
+    {
+      "file": "README.md",
+      "bytes": 2610,
+      "sha256": "e9df8a77bd7780b736c045f0f687563da8cbc7d2368c97681164ca153b717b13"
+    },
+    {
+      "file": "theme/tokens.json",
+      "bytes": 851,
+      "sha256": "44fccc351fb9bf017d56991bcfc00931da66d290fd10a913b880e9b1599305eb"
+    },
+    {
+      "file": "theme/white-room.css",
+      "bytes": 4504,
+      "sha256": "787737a512d02eb4a5eb5bedc47f73036939d47d93d2a2b38675a19338b751fd"
+    },
+    {
+      "file": "font-notes.txt",
+      "bytes": 1407,
+      "sha256": "72e6ec536984bf821d88d17006c950a4f74901a0d4cb7109e6ee7293fa6a46dc"
+    },
+    {
+      "file": "font-licenses/apache-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "file": "font-licenses/general-sans.txt",
+      "bytes": 14095,
+      "sha256": "987f0eee7f1ae992616afe70f564647f97ae8caf024e2957660c454f5c059533"
+    },
+    {
+      "file": "font-licenses/meslo-notices.txt",
+      "bytes": 5228,
+      "sha256": "b1bfd88d9d5e9df6d9499ae1d5d090d4787b71f6cced661e4b0dd4cad1a6f095"
+    }
+  ]
+}
