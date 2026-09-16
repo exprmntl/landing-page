@@ -16,8 +16,7 @@
   font-size: 17px;
   margin-top: 26px;
 }
-.catalog-home .catalog-heading,
-.catalog-home .catalog-more-heading {
+.catalog-home .catalog-heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,8 +26,7 @@
   border-top: 1px solid var(--border);
   padding-top: 28px;
 }
-.catalog-home .catalog-heading h2,
-.catalog-home .catalog-more-heading h2 {
+.catalog-home .catalog-heading h2 {
   font-size: 26px;
 }
 .catalog-home .catalog-toolbar {
@@ -58,6 +56,10 @@
   min-height: 54px;
   padding-bottom: 24px;
 }
+.catalog-home .gallery-project-topline > .direction-label {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
 .catalog-home .direction-image {
   aspect-ratio: 16 / 9;
 }
@@ -76,9 +78,6 @@
   }
   .catalog-home .gallery-project-visual {
     padding-inline: 16px;
-  }
-  .catalog-home .gallery-project-copy h3 {
-    font-size: 36px;
   }
 }
 .catalog-home .gallery-project-copy {
@@ -103,39 +102,13 @@
   margin-top: auto;
   padding-block: 7px;
 }
-.catalog-home .catalog-more {
-  padding-bottom: 60px;
-}
-.catalog-home .catalog-more-heading {
-  padding-block: 28px;
-  border-top: 1px solid var(--border);
-}
-.catalog-home .catalog-more article {
-  border-top: 1px solid var(--border);
-}
-.catalog-home .catalog-more article > a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding-block: 28px;
-}
-.catalog-home .catalog-more h3 {
-  font-size: 26px;
-  line-height: 1.15;
-  margin-top: 10px;
-}
-.catalog-home .catalog-more article p {
-  color: var(--muted-foreground);
-  font-size: 15px;
-  margin-top: 12px;
-}
-.catalog-home .catalog-more article > a > svg {
+.catalog-home .gallery-visit > svg {
   flex-shrink: 0;
 }
-.catalog-home .catalog-more a:hover h3 {
-  text-decoration: underline;
-  text-underline-offset: 5px;
+@media (min-width: 1280px) {
+  .catalog-home .gallery-project-copy h3 {
+    font-size: 36px;
+  }
 }
 .catalog-home .gallery-about {
   grid-template-columns: 0.7fr 1.3fr;
@@ -173,8 +146,7 @@
   .catalog-home .catalog-heading {
     padding-top: 24px;
   }
-  .catalog-home .catalog-heading h2,
-  .catalog-home .catalog-more-heading h2 {
+  .catalog-home .catalog-heading h2 {
     font-size: 24px;
   }
   .catalog-home .catalog-toolbar > div {
@@ -186,12 +158,6 @@
   }
   .catalog-home .gallery-project-copy h3 {
     font-size: 36px;
-  }
-  .catalog-home .catalog-more {
-    padding-bottom: 38px;
-  }
-  .catalog-home .catalog-more h3 {
-    font-size: 25px;
   }
   .catalog-home .gallery-about {
     display: block;

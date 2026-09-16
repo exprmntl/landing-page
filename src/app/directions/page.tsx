@@ -34,11 +34,11 @@ const directions = [
     title: "The Gallery / updated",
     purpose: "Let the work speak first.",
     description:
-      "The selected direction, updated with the agreed company language. Three equally sized project cards, TypeChinese first, RxRecall marked New, and more projects below.",
-    structure: "Introduction → main projects → more projects → the lab",
+      "The selected direction, updated with the agreed company language. Six equally sized project cards, TypeChinese first, and RxRecall marked New.",
+    structure: "Introduction → project gallery → the lab",
     action: "Browse and open a project",
     image: "gallery",
-    alt: "Gallery homepage with side navigation and a visual collection of projects",
+    alt: "Gallery homepage with an introduction and a visual collection of equally sized project cards",
   },
 ];
 
@@ -119,7 +119,7 @@ export default function DirectionsIndex() {
           <p>
             The Gallery is the selected foundation for the current homepage. Its updated
             copy leads with “From experimentation to production.” Projects receive
-            similar prominence, with TypeChinese first and RxRecall marked New.
+            equal prominence, with TypeChinese first and RxRecall marked New.
           </p>
           <Link href="/" className="direction-text-link">
             Open the current homepage <ArrowUpRight size={18} aria-hidden="true" />

@@ -8,10 +8,9 @@ export type CatalogProject = {
   description: string;
   href: string;
   domain: string;
-  placement: "main" | "additional";
   newRelease?: boolean;
-  image?: string;
-  alt?: string;
+  image: string;
+  alt: string;
 };
 
 // Display order reflects the catalog, not a ranking or an internal maintenance status.
@@ -25,9 +24,8 @@ export const catalog: CatalogProject[] = [
       "Chinese typing practice with vocabulary, real passages, and support for Simplified and Traditional Chinese.",
     href: "https://typechinese.io/",
     domain: "typechinese.io",
-    placement: "main",
-    image: "/marketing/projects/typechinese.webp",
-    alt: "TypeChinese’s Chinese typing practice screen with vocabulary and pinyin hints",
+    image: "/marketing/projects/typechinese-home.webp",
+    alt: "TypeChinese’s landing page introducing Chinese typing practice",
   },
   {
     id: "rxrecall",
@@ -38,7 +36,6 @@ export const catalog: CatalogProject[] = [
       "An iOS study app for pharmacy students, with drug-name review on the Lock Screen and a searchable drug library.",
     href: "https://rx-recall.com/",
     domain: "rx-recall.com",
-    placement: "main",
     newRelease: true,
     image: "/marketing/projects/rxrecall.webp",
     alt: "RxRecall’s product page showing its Today screen and a Lock Screen widget preview",
@@ -52,7 +49,6 @@ export const catalog: CatalogProject[] = [
       "An open-source React component library for voice agents, with expressive visuals and provider integrations.",
     href: "https://orb-ui.com/",
     domain: "orb-ui.com",
-    placement: "main",
     image: "/marketing/projects/orb-ui.webp",
     alt: "Orb UI’s live voice demo with an animated cloud orb and theme controls",
   },
@@ -64,17 +60,19 @@ export const catalog: CatalogProject[] = [
     description: "Test and compare keyboard layouts, including Dvorak and Colemak.",
     href: "https://keyboard.experimental.software/",
     domain: "keyboard.experimental.software",
-    placement: "additional",
+    image: "/marketing/projects/keyboard.webp",
+    alt: "Keyboard Layout Tester with layout choices, typing practice, and an on-screen keyboard",
   },
   {
     id: "flights-currency",
     name: "Google Flights Currency",
     category: "Web",
     format: "BROWSER EXTENSION",
-    description: "View flight prices in local currency on Google Flights.",
+    description: "Keep Google Flights prices in USD instead of changing with your location.",
     href: "https://chromewebstore.google.com/detail/google-flights-currency-s/nameliafoadmpledepdbcgnogcnfiemo",
     domain: "Chrome Web Store",
-    placement: "additional",
+    image: "/marketing/projects/flights-currency.webp",
+    alt: "Google Flights Currency Setter’s published artwork with its name and airplane icon",
   },
   {
     id: "badminton",
@@ -85,6 +83,7 @@ export const catalog: CatalogProject[] = [
       "A badminton racket database for comparing specifications, prices, and popularity.",
     href: "https://badminton.fyi/",
     domain: "badminton.fyi",
-    placement: "additional",
+    image: "/marketing/projects/badminton-detail.webp",
+    alt: "A badminton.fyi racket profile with specifications and price information",
   },
 ];

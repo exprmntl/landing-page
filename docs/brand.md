@@ -32,7 +32,7 @@ The reference is `/brand#language`, with shared copy in `src/lib/brand-copy.ts`.
 - Voice: company-focused, direct, deliberate, and ambitious. Use “we.” The company introduction does not name the founder or narrow the company to current project categories.
 - Navigation and catalog: **Projects**. A product is a project released for ongoing use; an experiment explores or tests an idea. This vocabulary does not require separate public sections or classify all small projects as experiments.
 - Core verbs: **develop, launch, and grow**; **develop and operate** for ongoing company responsibility. Research describes exploration.
-- The homepage gives TypeChinese, RxRecall, and Orb UI equal-sized entries, puts TypeChinese first, marks RxRecall as New, and keeps smaller projects accessible under More projects. badminton.fyi is now a legacy entry in More projects.
+- The homepage gives all six projects the same image-led card treatment, puts TypeChinese first, and marks RxRecall as New. badminton.fyi keeps its Legacy / Database label with equal visual prominence.
 
 The visual identity and typography remain White Room 1.1. The wording above replaces earlier marketing copy; historical layout studies retain their earlier copy for comparison.
 

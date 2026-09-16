@@ -28,18 +28,16 @@ function ProjectCard({
             {project.newRelease && <span className="catalog-new">NEW</span>}
             <ArrowUpRight size={20} aria-hidden="true" />
           </div>
-          {project.image && (
-            <div className={`direction-image direction-image-${project.id}`}>
-              <Image
-                src={project.image}
-                alt={project.alt ?? project.name}
-                width={1280}
-                height={720}
-                sizes="(max-width: 760px) calc(100vw - 80px), (max-width: 1279px) 34vw, 25vw"
-                priority={priority}
-              />
-            </div>
-          )}
+          <div className={`direction-image direction-image-${project.id}`}>
+            <Image
+              src={project.image}
+              alt={project.alt}
+              width={1280}
+              height={720}
+              sizes="(max-width: 760px) calc(100vw - 80px), (max-width: 1279px) 34vw, 25vw"
+              priority={priority}
+            />
+          </div>
         </div>
         <div className="gallery-project-copy">
           <p className="direction-label">{project.format}</p>
@@ -59,8 +57,6 @@ export function ProjectCatalog() {
   const visible = catalog.filter(
     (project) => filter === "All projects" || project.category === filter,
   );
-  const mainProjects = visible.filter((project) => project.placement === "main");
-  const moreProjects = visible.filter((project) => project.placement === "additional");
 
   return (
     <>
@@ -96,7 +92,7 @@ export function ProjectCatalog() {
       </div>
       <div id="project-results">
         <div className="gallery-grid">
-          {mainProjects.map((project) => (
+          {visible.map((project) => (
             <ProjectCard
               key={project.id}
               project={project}
@@ -104,28 +100,6 @@ export function ProjectCatalog() {
             />
           ))}
         </div>
-        {moreProjects.length > 0 && (
-          <section className="catalog-more" aria-labelledby="more-projects-title">
-            <div className="catalog-more-heading">
-              <h2 id="more-projects-title">More projects</h2>
-              <span className="direction-label">
-                {String(moreProjects.length).padStart(2, "0")} PROJECTS
-              </span>
-            </div>
-            {moreProjects.map((project) => (
-              <article key={project.id}>
-                <a href={project.href} aria-label={`Explore ${project.name}`}>
-                  <div>
-                    <span className="direction-label">{project.format}</span>
-                    <h3>{project.name}</h3>
-                    <p>{project.description}</p>
-                  </div>
-                  <ArrowUpRight size={24} aria-hidden="true" />
-                </a>
-              </article>
-            ))}
-          </section>
-        )}
       </div>
     </>
   );
