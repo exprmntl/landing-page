@@ -9,10 +9,11 @@ storage.sync API. Chrome may synchronize this preference between browsers
 signed into the same account when browser sync is enabled.
 
 The extension checks Google Flights URLs and changes their currency parameter
-on your device. It does not send flight searches, browsing history, personal
-information, or your chosen currency to Experimental Software or any external
-service. There are no analytics, ads, accounts, remote code, or servers operated
-for this extension.
+on your device. Outside Google's normal page requests and Chrome's built-in
+preference sync, it makes no network requests. Experimental Software does not
+receive your chosen currency, flight searches, browsing history, or personal
+information. There are no analytics, ads, accounts, remote code, or servers
+operated for this extension.
 
 The content script is limited to Google Travel pages so it can detect navigation
 into Google Flights. It changes only Google Flights URLs. The storage permission
