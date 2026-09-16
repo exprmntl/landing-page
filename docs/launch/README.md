@@ -11,6 +11,7 @@ Prepared September 16, 2026. The website PR remains a draft and must not be merg
 - Notion, LinkedIn, and X covers: `public/brand/downloads/covers/`.
 - Expanded downloadable brand kit: `public/brand/downloads/experimental-software-brand-kit.zip`.
 - Website repository homepage URL corrected to `https://experimental.software`.
+- Current Notion company page updated with the paper avatar, centered cover, approved introduction, and guide/asset links; existing child pages and notes preserved. Artwork uses fixed commit URLs so it does not depend on the preview deployment or an unmerged production release.
 
 All asset text is outlined using the selected fonts; no font binaries are included. The generator is `scripts/build-brand-assets.mjs`. Public profile copy contains no internal business plans, credentials, or revenue figures.
 
