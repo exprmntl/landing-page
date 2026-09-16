@@ -50,7 +50,7 @@ export function GalleryHome({ home = "/" }: { home?: string }) {
           id="about"
           aria-labelledby="gallery-about-title"
         >
-          <p className="direction-label">ABOUT EXPERIMENTAL SOFTWARE</p>
+          <p className="direction-label">ABOUT</p>
           <h2 id="gallery-about-title">About the lab.</h2>
           <div>
             <p>{brandCopy.about}</p>
@@ -67,6 +67,7 @@ export function GalleryHome({ home = "/" }: { home?: string }) {
       </main>
       <footer className="direction-footer">
         <div className="direction-footer-top" id="contact">
+          <span className="direction-label">CONTACT</span>
           <p>Get in touch.</p>
           <a
             className="direction-text-link"

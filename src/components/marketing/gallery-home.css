@@ -197,6 +197,14 @@
   font-size: 48px;
   line-height: 1.1;
 }
+.catalog-home .direction-footer-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  row-gap: 32px;
+}
+.catalog-home .direction-footer-top > .direction-label {
+  grid-column: 1 / -1;
+}
 @media (max-width: 1100px) {
   .catalog-home .gallery-intro h1 {
     font-size: clamp(40px, 4.8vw, 58px);
@@ -242,6 +250,13 @@
   }
   .catalog-home .gallery-about {
     display: block;
+  }
+  .catalog-home .direction-footer-top {
+    display: block;
+  }
+  .catalog-home .direction-footer-top > .direction-label {
+    display: block;
+    margin-bottom: 22px;
   }
   .catalog-home .direction-footer-top > .direction-text-link {
     font-size: 13px;
