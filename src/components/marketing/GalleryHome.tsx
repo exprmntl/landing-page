@@ -21,7 +21,6 @@ export function GalleryHome({ home = "/" }: { home?: string }) {
             software
           </span>
         </Link>
-        <span className="direction-label direction-header-note">SOFTWARE LAB</span>
         <nav aria-label="Main navigation">
           <a href="#projects">Projects</a>
           <a href="#about">About</a>
