@@ -1,6 +1,6 @@
 # Flight Currency artwork
 
-Approved multi-currency campaign image with a lighter “for Google Flights” subtitle. Exports: 1280×800 store screenshot and 440×280 promo tile. Existing airplane app icon is preserved from published version 0.1.0. Legacy artwork is retained in `legacy/`.
+Approved multi-currency campaign image with a lighter “for Google Flights” subtitle. Exports: 1280×800 store screenshot and 440×280 promo tile. The new ticket-and-exchange icon is exported from the extension repository’s editable SVG in the same acid and near-black palette. Legacy artwork is retained in `legacy/`.
 
 ## Generation prompts
 
@@ -19,4 +19,4 @@ Make one precise typography edit to this Flight Currency promotional image. ONLY
 
 ## Website release coordination
 
-The website card reflects the upcoming currency-picker release 1.1.0. The extension is installed locally and uploaded as a Chrome Web Store draft, not submitted or published. Coordinate the website merge and store release. A replacement privacy policy is prepared at `/legal/flight-currency-privacy.txt`; update the store draft policy URL after that path is publicly available.
+The website card reflects the upcoming currency-picker release 1.1.1. The extension is installed locally and uploaded as a Chrome Web Store draft, not submitted or published. Coordinate the website merge and store release. A replacement privacy policy is prepared at `/flight-currency/privacy`; update the store draft policy URL after that path is publicly available.
