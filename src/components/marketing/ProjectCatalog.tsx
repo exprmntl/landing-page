@@ -19,8 +19,10 @@ function ProjectCard({
     <article className={`gallery-project gallery-project-${project.id}`}>
       <a
         href={project.href}
+        target="_blank"
+        rel="noopener noreferrer"
         className="gallery-project-link"
-        aria-label={`Explore ${project.name}`}
+        aria-label={`Explore ${project.name} (opens in a new tab)`}
       >
         <div className="gallery-project-visual">
           <div className="gallery-project-topline">

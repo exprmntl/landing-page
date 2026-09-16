@@ -54,7 +54,12 @@ export function GalleryHome({ home = "/" }: { home?: string }) {
           <h2 id="gallery-about-title">About the lab.</h2>
           <div>
             <p>{brandCopy.about}</p>
-            <a className="direction-text-link" href="https://github.com/exprmntl">
+            <a
+              className="direction-text-link"
+              href="https://github.com/exprmntl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Explore our work on GitHub <ArrowUpRight size={18} aria-hidden="true" />
             </a>
           </div>
@@ -63,7 +68,12 @@ export function GalleryHome({ home = "/" }: { home?: string }) {
       <footer className="direction-footer">
         <div className="direction-footer-top" id="contact">
           <p>Get in touch.</p>
-          <a className="direction-text-link" href="mailto:hello@experimental.software">
+          <a
+            className="direction-text-link"
+            href="mailto:hello@experimental.software"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             hello@experimental.software <ArrowUpRight size={18} aria-hidden="true" />
           </a>
         </div>
@@ -72,10 +82,16 @@ export function GalleryHome({ home = "/" }: { home?: string }) {
             © {new Date().getFullYear()} EXPERIMENTAL SOFTWARE
           </span>
           <nav aria-label="Footer navigation">
-            <Link href="/code">
+            <Link href="/code" target="_blank" rel="noopener noreferrer">
               Code <ArrowUpRight size={14} aria-hidden="true" />
             </Link>
-            <a href="https://github.com/exprmntl">GitHub</a>
+            <a
+              href="https://github.com/exprmntl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub <ArrowUpRight size={14} aria-hidden="true" />
+            </a>
           </nav>
         </div>
       </footer>
