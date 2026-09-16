@@ -25,9 +25,7 @@ export function GalleryHome({ home = "/" }: { home?: string }) {
           <nav aria-label="Main navigation">
             <a href="#projects">Projects</a>
             <a href="#about">About</a>
-            <a href="https://github.com/exprmntl">
-              GitHub <ArrowUpRight size={14} aria-hidden="true" />
-            </a>
+            <a href="#contact">Contact</a>
           </nav>
         </div>
       </header>
@@ -63,7 +61,7 @@ export function GalleryHome({ home = "/" }: { home?: string }) {
         </section>
       </main>
       <footer className="direction-footer">
-        <div className="direction-footer-top">
+        <div className="direction-footer-top" id="contact">
           <p>Get in touch.</p>
           <a className="direction-text-link" href="mailto:hello@experimental.software">
             hello@experimental.software <ArrowUpRight size={18} aria-hidden="true" />
@@ -75,9 +73,8 @@ export function GalleryHome({ home = "/" }: { home?: string }) {
           </span>
           <nav aria-label="Footer navigation">
             <Link href="/code">
-              Inside this website <ArrowUpRight size={14} aria-hidden="true" />
+              Code <ArrowUpRight size={14} aria-hidden="true" />
             </Link>
-            <Link href="/brand">Brand & assets</Link>
             <a href="https://github.com/exprmntl">GitHub</a>
           </nav>
         </div>

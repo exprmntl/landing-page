@@ -44,7 +44,7 @@ export const catalog: CatalogProject[] = [
     id: "orb-ui",
     name: "Orb UI",
     category: "Developer tools",
-    format: "OPEN SOURCE / REACT",
+    format: "OPEN SOURCE",
     description:
       "An open-source React component library for voice agents, with expressive visuals and provider integrations.",
     href: "https://orb-ui.com/",
@@ -60,7 +60,7 @@ export const catalog: CatalogProject[] = [
     description: "Test and compare keyboard layouts, including Dvorak and Colemak.",
     href: "https://keyboard.experimental.software/",
     domain: "keyboard.experimental.software",
-    image: "/marketing/projects/keyboard.webp",
+    image: "/marketing/projects/keyboard-clean.webp",
     alt: "Keyboard Layout Tester with layout choices, typing practice, and an on-screen keyboard",
   },
   {
@@ -71,14 +71,14 @@ export const catalog: CatalogProject[] = [
     description: "Keep Google Flights prices in USD instead of changing with your location.",
     href: "https://chromewebstore.google.com/detail/google-flights-currency-s/nameliafoadmpledepdbcgnogcnfiemo",
     domain: "Chrome Web Store",
-    image: "/marketing/projects/flights-currency.webp",
-    alt: "Google Flights Currency Setter’s published artwork with its name and airplane icon",
+    image: "/marketing/projects/flights-currency-refresh.webp",
+    alt: "Google Flights Currency Setter artwork with an acid-yellow USD boarding pass and the message Prices in USD, wherever you search",
   },
   {
     id: "badminton",
     name: "badminton.fyi",
     category: "Web",
-    format: "LEGACY / DATABASE",
+    format: "DATABASE",
     description:
       "A badminton racket database for comparing specifications, prices, and popularity.",
     href: "https://badminton.fyi/",

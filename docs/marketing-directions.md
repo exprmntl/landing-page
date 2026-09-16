@@ -11,7 +11,8 @@ The Gallery is the selected foundation. The latest local homepage is at `/`, wit
 - All six projects use the same image-led card layout, in this order: TypeChinese, RxRecall, Orb UI, Keyboard Layout Tester, Google Flights Currency, badminton.fyi.
 - Image backgrounds follow the captured screenshot or artwork: Orb UI, Keyboard Layout Tester, and Google Flights Currency use dark frames; the other projects use light frames. Labels, arrows, and image borders adapt to the frame for contrast.
 - RxRecall carries a small **New** label.
-- badminton.fyi keeps its **Legacy / Database** label and the same visual prominence as every other project.
+- Orb UI is labeled **Open source** and badminton.fyi is labeled **Database**, with the same visual prominence as every other project.
+- The sidebar has Projects, About, and Contact anchors. Contact scrolls to Get in Touch. The footer links to Code and GitHub; the brand guide remains directly available at `/brand`.
 - **Projects** is the catalog and navigation term. Filters narrow the unified six-project grid.
 - Internal revenue, founder biography, and temporary maintenance priorities are not part of the public company copy.
 
@@ -38,7 +39,7 @@ All `/directions` routes are `noindex, nofollow` and omitted from the sitemap. T
 
 All project links and descriptions render in the initial HTML. Each card links directly to the project website or extension listing; there is no intermediate page required to reach a project.
 
-The images in `public/marketing/projects/` come from the live product websites and the published Chrome Web Store listing. TypeChinese uses its landing page. See that directory's README for source URLs and capture notes. RxRecall's public presentation includes an app screenshot and its site's illustrated Lock Screen preview. The company site does not invent product interfaces.
+The images in `public/marketing/projects/` come from the live product websites, except for the refreshed Google Flights Currency promotional illustration. TypeChinese uses its landing page, and Keyboard Layout Tester's capture is cropped to remove the scrollbar. See that directory's README for source URLs and capture notes. RxRecall's public presentation includes an app screenshot and its site's illustrated Lock Screen preview. Google Flights Currency uses a USD boarding-pass graphic with matching Chrome Web Store exports in `public/marketing/extension-artwork/`. The company site does not invent product interfaces.
 
 The review hub thumbnails are in `public/marketing/directions/`. Marketing images are excluded from the repository text mirror so binary data does not inflate the editor bundle; component source and copy remain visible in `/code`.
 
