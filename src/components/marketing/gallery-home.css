@@ -36,7 +36,20 @@
     margin-left: calc(var(--catalog-mark-size) * 22 / 128);
   }
   .direction-gallery.catalog-home > main {
+    display: grid;
+    grid-template-columns: var(--catalog-sidebar-width) minmax(0, 1fr);
+    grid-column: 1 / -1;
+    border-left: 0;
+  }
+  .direction-gallery.catalog-home .gallery-intro,
+  .direction-gallery.catalog-home .gallery-work {
     grid-column: 2;
+    border-left: 1px solid var(--border);
+  }
+  .direction-gallery.catalog-home .gallery-about {
+    grid-column: 1 / -1;
+    position: relative;
+    background: var(--background);
   }
   .direction-gallery.catalog-home > .direction-footer {
     grid-column: 1 / -1;
