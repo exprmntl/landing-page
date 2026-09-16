@@ -194,7 +194,45 @@ function shareCard(width, height, isTemplate = false) {
   );
 }
 await artwork("social/experimental-software", shareCard(1200, 630), 1200);
+await artwork("social/github-repository", shareCard(1280, 640), 1280);
 await artwork("templates/repository-cover", shareCard(1280, 640, true), 1280);
+
+// Center the complete approved lockup within Notion's shallow cover crop.
+const notionLockup = stackedArtwork();
+const notionScale = 1.35;
+await artwork(
+  "covers/notion-white-room",
+  svg(
+    1500,
+    600,
+    "Experimental Software / White Room Notion cover",
+    `<g transform="translate(${(1500 - notionLockup.width * notionScale) / 2} ${(600 - 144 * notionScale) / 2}) scale(${notionScale})">${notionLockup.markup}</g>`,
+    ink,
+    paper,
+  ),
+  1500,
+);
+
+// Leave the left side clear for the platform's overlapping profile avatar.
+for (const [name, width, height, x, baseline, size, maxWidth, lineHeight, badgeY, badgeSize] of [
+  ["linkedin-company", 1128, 191, 320, 70, 48, 760, 52, 144, 14],
+  ["x-profile", 1500, 500, 480, 182, 64, 920, 74, 306, 24],
+]) {
+  const label = text(mono, brandCopy.category.toUpperCase(), x + 12, badgeY + badgeSize + 5, badgeSize);
+  await artwork(
+    `covers/${name}`,
+    svg(
+      width,
+      height,
+      `Experimental Software / ${name} banner`,
+      wrappedText(regular, brandCopy.headline, x, baseline, size, maxWidth, lineHeight, -0.03) +
+        `<path fill="${acid}" d="M${x} ${badgeY}h${label.width + 24}v${badgeSize + 12}H${x}Z"/>` + label.markup,
+      ink,
+      paper,
+    ),
+    width,
+  );
+}
 
 const favicon = svg(128, 128, "Experimental Software", geometry, ink, paper);
 await save("favicons/favicon.svg", favicon);
@@ -243,7 +281,8 @@ Reference: https://experimental.software/brand
 - logos/: stacked primary lockup, horizontal lockup, and wordmark only. Ink or white; transparent SVG + PNG. All lettering is outlined.
 - avatars/: 512px square avatars on paper, ink, or acid. Suitable for GitHub and Notion; padded for circular crops.
 - favicons/: browser SVG, multi-size ICO, 32px PNG, 180px Apple touch icon, and 512px app icon.
-- social/: 1200 × 630 company share card, SVG + PNG.
+- social/: 1200 × 630 company share card and finished 1280 × 640 GitHub repository social preview, SVG + PNG.
+- covers/: centered 1500 × 600 Notion cover, 1128 × 191 LinkedIn company banner, and 1500 × 500 X profile header, SVG + PNG. Keep cover positioning centered; social banners reserve space for overlapping avatars.
 - templates/: 1280 × 640 repository cover layout, SVG + PNG. “Project name” is a placeholder, not a launched product. Regenerate from the source script with the actual name and description.
 - theme/: CSS and JSON design tokens.
 - font-notes.txt and font-licenses/: font setup and license information. Font files are not included.

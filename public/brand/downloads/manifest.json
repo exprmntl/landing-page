@@ -122,6 +122,16 @@
       "sha256": "f100917cd4a515cd212d13a92971559698daf211f62e9f24f6ab42d926848531"
     },
     {
+      "file": "social/github-repository.svg",
+      "bytes": 17832,
+      "sha256": "6c855f020ec27bf451ca558080f1d8be40713c8246e1e033d5f22ceae7549112"
+    },
+    {
+      "file": "social/github-repository.png",
+      "bytes": 49021,
+      "sha256": "16786bad7fd307def3a33c917433e8dd8ad1fc69ac3f36c55fbe9a574edaaeec"
+    },
+    {
       "file": "templates/repository-cover.svg",
       "bytes": 27445,
       "sha256": "0afa7d2f2d9fa901cddfef60d9ef4737494afeb5efb6e084fd2ed6e0c6cc6b4c"
@@ -130,6 +140,36 @@
       "file": "templates/repository-cover.png",
       "bytes": 34839,
       "sha256": "b75521a587a8792200db568793723dbea5d5b4e64cdf29c759e1b798ea2c97e3"
+    },
+    {
+      "file": "covers/notion-white-room.svg",
+      "bytes": 6113,
+      "sha256": "3dda3038b9f068503e4d7806bc90beac29182e7ba3154e374085e0820a8fcd9a"
+    },
+    {
+      "file": "covers/notion-white-room.png",
+      "bytes": 19279,
+      "sha256": "f73fb6a0ea072b2fe40b92441b628663f2159359c304ed3ab1fb483b0d8bc5ad"
+    },
+    {
+      "file": "covers/linkedin-company.svg",
+      "bytes": 11969,
+      "sha256": "a59438aaa2bc4a0dd3411b037a0666544ab3a57cac4e8646cf9304a69990875a"
+    },
+    {
+      "file": "covers/linkedin-company.png",
+      "bytes": 14461,
+      "sha256": "d1f7fe90629260484b3775f8bf755b331520ece869b6eb170c8e038d9741bc85"
+    },
+    {
+      "file": "covers/x-profile.svg",
+      "bytes": 11969,
+      "sha256": "8fbea050a2cedfd3326d17ebcdc78d4e7e1fdeddb196db5900519a12c2615b1d"
+    },
+    {
+      "file": "covers/x-profile.png",
+      "bytes": 24769,
+      "sha256": "769325b9bdd005112527fbc2f3a8602a701499e681f3fe92d442ba01d9b37bad"
     },
     {
       "file": "favicons/favicon.svg",
@@ -158,8 +198,8 @@
     },
     {
       "file": "README.md",
-      "bytes": 2610,
-      "sha256": "e9df8a77bd7780b736c045f0f687563da8cbc7d2368c97681164ca153b717b13"
+      "bytes": 2883,
+      "sha256": "ca88d30d2b64f0a28ed5614f6d1ce5a0d41167f7c6678c50714683ea1e00fba8"
     },
     {
       "file": "theme/tokens.json",

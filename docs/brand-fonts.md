@@ -4,7 +4,7 @@ Selected pairing: General Sans Regular 400 and Medium 500, with Meslo LG S Regul
 
 `pnpm dev` and `pnpm build` run `prepare:brand-fonts`. It fetches the exact files used in the approved local comparison, checks their SHA-256 hashes, and writes them to `generated/brand-fonts/`. Cached files are verified and reused. A missing, changed, or unavailable download fails the build with an error rather than silently publishing fallback typography. To refresh locally, run `pnpm prepare:brand-fonts`.
 
-`next/font/local` serves the files from this site's build and preloads them on `/brand`. Apply `whiteRoomFonts` from `src/styles/brand-fonts.ts` to the page root and portaled dialog content. These classes provide the variables consumed by `.brand-theme`. Generic fallback families remain only for the loading/error state; font synthesis is disabled. The homepage is not styled with these classes.
+`next/font/local` serves the files from this site's build. The marketing homepage, brand guide, and Flight Currency privacy page apply `whiteRoomFonts` from `src/styles/brand-fonts.ts`; portaled brand components use the same classes. These classes provide the variables consumed by `.brand-theme`. Generic fallback families remain only for the loading/error state; font synthesis is disabled. The IDE retains its existing font stack.
 
 ## Sources and terms
 

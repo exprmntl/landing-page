@@ -8,7 +8,8 @@ Reference: https://experimental.software/brand
 - logos/: stacked primary lockup, horizontal lockup, and wordmark only. Ink or white; transparent SVG + PNG. All lettering is outlined.
 - avatars/: 512px square avatars on paper, ink, or acid. Suitable for GitHub and Notion; padded for circular crops.
 - favicons/: browser SVG, multi-size ICO, 32px PNG, 180px Apple touch icon, and 512px app icon.
-- social/: 1200 × 630 company share card, SVG + PNG.
+- social/: 1200 × 630 company share card and finished 1280 × 640 GitHub repository social preview, SVG + PNG.
+- covers/: centered 1500 × 600 Notion cover, 1128 × 191 LinkedIn company banner, and 1500 × 500 X profile header, SVG + PNG. Keep cover positioning centered; social banners reserve space for overlapping avatars.
 - templates/: 1280 × 640 repository cover layout, SVG + PNG. “Project name” is a placeholder, not a launched product. Regenerate from the source script with the actual name and description.
 - theme/: CSS and JSON design tokens.
 - font-notes.txt and font-licenses/: font setup and license information. Font files are not included.

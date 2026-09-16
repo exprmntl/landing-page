@@ -8,11 +8,12 @@ The Gallery is the selected foundation. The latest local homepage is at `/`, wit
 - Company category: **software lab**.
 - The desktop sidebar has a centered logo with navigation aligned to the mark’s visible left edge and generous space between them. It has no category label and stays fixed beside the introduction and project gallery while scrolling. About the Lab, Get in Touch, and the footer span the full page width below the gallery. The page uses one natural scroll flow. Mobile keeps the compact header.
 - The shared introduction and About paragraph are in `src/lib/brand-copy.ts` and documented at `/brand#language`.
-- All six projects use the same image-led card layout, in this order: TypeChinese, RxRecall, Orb UI, Keyboard Layout Tester, Google Flights Currency, badminton.fyi.
-- Image backgrounds follow the captured screenshot or artwork: Orb UI, Keyboard Layout Tester, and Google Flights Currency use dark frames; the other projects use light frames. Labels, arrows, and image borders adapt to the frame for contrast.
+- All six projects use the same image-led card layout, in this order: TypeChinese, RxRecall, Orb UI, Keyboard Layout Tester, Flight Currency, badminton.fyi.
+- Image backgrounds follow the captured screenshot or artwork: Orb UI, Keyboard Layout Tester, and Flight Currency use dark frames; the other projects use light frames. Labels, arrows, and image borders adapt to the frame for contrast.
 - RxRecall carries a small **New** label.
 - Orb UI is labeled **Open source** and badminton.fyi is labeled **Database**, with the same visual prominence as every other project.
 - The sidebar has Projects, About, and Contact anchors. Contact scrolls to Get in Touch. The footer links to Code and GitHub; the brand guide remains directly available at `/brand`.
+- About and Contact have matching mono eyebrows and 48px headings. Links with up-right arrows request a new tab, including the footer GitHub and Code links; email handling remains controlled by the browser's configured mail handler.
 - **Projects** is the catalog and navigation term. Filters narrow the unified six-project grid.
 - Internal revenue, founder biography, and temporary maintenance priorities are not part of the public company copy.
 
@@ -39,7 +40,7 @@ All `/directions` routes are `noindex, nofollow` and omitted from the sitemap. T
 
 All project links and descriptions render in the initial HTML. Each card links directly to the project website or extension listing; there is no intermediate page required to reach a project.
 
-The images in `public/marketing/projects/` come from the live product websites, except for the refreshed Google Flights Currency promotional illustration. TypeChinese uses its landing page, and Keyboard Layout Tester's capture is cropped to remove the scrollbar. See that directory's README for source URLs and capture notes. RxRecall's public presentation includes an app screenshot and its site's illustrated Lock Screen preview. Google Flights Currency uses a USD boarding-pass graphic with matching Chrome Web Store exports in `public/marketing/extension-artwork/`. The company site does not invent product interfaces.
+The images in `public/marketing/projects/` come from the live product websites, except for the refreshed Flight Currency promotional illustration. TypeChinese uses its landing page, and Keyboard Layout Tester's capture is cropped to remove the scrollbar. See that directory's README for source URLs and capture notes. RxRecall's public presentation includes an app screenshot and its site's illustrated Lock Screen preview. Flight Currency uses the approved GBP/EUR/USD boarding-pass graphic with the lighter “for Google Flights” subtitle and matching Chrome Web Store exports in `public/marketing/extension-artwork/`. Its currency-selection claims must be coordinated with the extension release. The company site does not invent product interfaces.
 
 The review hub thumbnails are in `public/marketing/directions/`. Marketing images are excluded from the repository text mirror so binary data does not inflate the editor bundle; component source and copy remain visible in `/code`.
 
