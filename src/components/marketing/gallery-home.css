@@ -1,33 +1,53 @@
+.catalog-sidebar-content {
+  display: contents;
+}
 @media (min-width: 761px) {
   .direction-gallery.catalog-home {
     --catalog-sidebar-width: 254px;
+    --catalog-mark-size: 48px;
     grid-template-columns: var(--catalog-sidebar-width) minmax(0, 1fr);
   }
   .direction-gallery.catalog-home .direction-header {
     position: fixed;
-    inset-block: var(--catalog-sidebar-top, 0px) 0;
+    inset-block: calc(var(--catalog-sidebar-top, 0px) + 42px) auto;
     inset-inline-start: max(0px, calc((100% - 1800px) / 2));
-    width: var(--catalog-sidebar-width);
+    width: calc(var(--catalog-sidebar-width) - 1px);
+    max-height: calc(100dvh - var(--catalog-sidebar-top, 0px) - 42px);
     margin: 0;
-    padding: 42px 0 24px;
+    padding: 0 0 24px;
     justify-content: flex-start;
     overflow-y: auto;
-    border-right: 1px solid var(--border);
   }
-  .direction-gallery.catalog-home .direction-lockup {
+  .direction-gallery.catalog-home .catalog-sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     align-self: center;
+    width: max-content;
+  }
+  .direction-gallery.catalog-home .direction-lockup svg {
+    width: var(--catalog-mark-size);
+    height: var(--catalog-mark-size);
   }
   .direction-gallery.catalog-home .direction-header nav {
     /* Preserve the space previously occupied by the category label and its margins. */
     margin-top: calc(38px + 11px * 1.8 + 36px);
-    margin-left: var(--direction-gutter);
-  }
-  .direction-gallery.catalog-home > main,
-  .direction-gallery.catalog-home > .direction-footer {
-    grid-column: 2;
+    /* Align to the visible mark: its artwork starts at x=22 in the 128-unit SVG. */
+    margin-left: calc(var(--catalog-mark-size) * 22 / 128);
   }
   .direction-gallery.catalog-home > main {
-    border-left: 0;
+    grid-column: 2;
+  }
+  .direction-gallery.catalog-home > .direction-footer {
+    grid-column: 1 / -1;
+    position: relative;
+    margin-inline: 0;
+    padding-inline: var(--direction-gutter);
+    border-top: 0;
+    background: var(--background);
+  }
+  .direction-gallery.catalog-home .direction-footer-top {
+    border-top: 1px solid var(--border);
   }
   .direction-preview:has(+ .catalog-home) {
     position: sticky;
@@ -41,9 +61,7 @@
 @media (min-width: 761px) and (max-width: 1100px) {
   .direction-gallery.catalog-home {
     --catalog-sidebar-width: 218px;
-  }
-  .direction-gallery.catalog-home .direction-header nav {
-    margin-left: 28px;
+    --catalog-mark-size: 38px;
   }
 }
 .catalog-home .gallery-intro {

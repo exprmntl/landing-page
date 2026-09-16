@@ -9,25 +9,27 @@ export function GalleryHome({ home = "/" }: { home?: string }) {
   return (
     <div className="direction-gallery catalog-home">
       <header className="direction-header">
-        <Link
-          href={home}
-          className="direction-lockup"
-          aria-label="Experimental Software home"
-        >
-          <Outlier />
-          <span>
-            experimental
-            <br />
-            software
-          </span>
-        </Link>
-        <nav aria-label="Main navigation">
-          <a href="#projects">Projects</a>
-          <a href="#about">About</a>
-          <a href="https://github.com/exprmntl">
-            GitHub <ArrowUpRight size={14} aria-hidden="true" />
-          </a>
-        </nav>
+        <div className="catalog-sidebar-content">
+          <Link
+            href={home}
+            className="direction-lockup"
+            aria-label="Experimental Software home"
+          >
+            <Outlier />
+            <span>
+              experimental
+              <br />
+              software
+            </span>
+          </Link>
+          <nav aria-label="Main navigation">
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="https://github.com/exprmntl">
+              GitHub <ArrowUpRight size={14} aria-hidden="true" />
+            </a>
+          </nav>
+        </div>
       </header>
       <main id="main">
         <section

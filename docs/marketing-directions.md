@@ -6,7 +6,7 @@ The Gallery is the selected foundation. The latest local homepage is at `/`, wit
 
 - Headline: **From experimentation to production.**
 - Company category: **software lab**.
-- The desktop sidebar has a centered logo and fixed navigation, with generous space between them. It has no category label; the content and footer scroll beside it. Mobile keeps the compact header.
+- The desktop sidebar has a centered logo with navigation aligned to the mark’s visible left edge and generous space between them. It has no category label and stays fixed while scrolling. The Get in Touch section and footer span the full page width below the content. Mobile keeps the compact header.
 - The shared introduction and About paragraph are in `src/lib/brand-copy.ts` and documented at `/brand#language`.
 - All six projects use the same image-led card layout, in this order: TypeChinese, RxRecall, Orb UI, Keyboard Layout Tester, Google Flights Currency, badminton.fyi.
 - RxRecall carries a small **New** label.
