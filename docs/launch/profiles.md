@@ -1,6 +1,6 @@
 # Profile copy and asset assignments
 
-These fields reuse the approved company language. Public GitHub profile changes are staged until the website launch. LinkedIn and Notion updates are separately authorized; see the launch checklist for their verification status.
+These fields reuse the approved company language. Public GitHub and LinkedIn profile changes are staged until the website launch. Notion branding and the website repository URL have been updated. X account creation is authorized during preparation; see the launch checklist for its status.
 
 ## Shared identity
 
@@ -54,7 +54,7 @@ Preserve existing factual fields such as founding year, location, and company si
 
 - Display name: **Experimental Software**.
 - Preferred handle: **@exprmntl**, subject to availability; fallback candidates are **@exprmntlsoft** and **@exprmntl_lab**. Do not claim availability before signup verifies it.
-- Email candidate: **hello@experimental.software**; requires user confirmation/access for account verification.
+- Signup email: **hello@experimental.software**, approved by the user. Account verification still requires access to that address.
 - Bio: **From experimentation to production. A software lab developing, launching, and growing its own software products.**
 - Website: https://experimental.software/
 - Avatar: shared paper avatar.

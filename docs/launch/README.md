@@ -1,6 +1,6 @@
 # White Room launch preparation
 
-Prepared September 16, 2026. The website PR remains a draft and must not be merged until the launch decision. Public GitHub organization branding and repository transfers are staged, not performed by this preparation.
+Prepared September 16, 2026. The website PR remains a draft and must not be merged until the launch decision. Public GitHub organization branding, LinkedIn profile changes, and repository transfers are staged, not published by this preparation. X signup is authorized using `hello@experimental.software`; the account has not yet been created and handle availability is unverified.
 
 ## Ready to apply
 
