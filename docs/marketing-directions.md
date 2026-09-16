@@ -9,6 +9,7 @@ The Gallery is the selected foundation. The latest local homepage is at `/`, wit
 - The desktop sidebar has a centered logo with navigation aligned to the mark’s visible left edge and generous space between them. It has no category label and stays fixed beside the introduction and project gallery while scrolling. About the Lab, Get in Touch, and the footer span the full page width below the gallery. The page uses one natural scroll flow. Mobile keeps the compact header.
 - The shared introduction and About paragraph are in `src/lib/brand-copy.ts` and documented at `/brand#language`.
 - All six projects use the same image-led card layout, in this order: TypeChinese, RxRecall, Orb UI, Keyboard Layout Tester, Google Flights Currency, badminton.fyi.
+- Image backgrounds follow the captured screenshot or artwork: Orb UI, Keyboard Layout Tester, and Google Flights Currency use dark frames; the other projects use light frames. Labels, arrows, and image borders adapt to the frame for contrast.
 - RxRecall carries a small **New** label.
 - badminton.fyi keeps its **Legacy / Database** label and the same visual prominence as every other project.
 - **Projects** is the catalog and navigation term. Filters narrow the unified six-project grid.
