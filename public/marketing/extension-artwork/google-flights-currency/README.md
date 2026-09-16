@@ -1,16 +1,22 @@
-# Google Flights Currency Setter artwork
+# Flight Currency artwork
 
-Generated September 16, 2026 with the built-in image-generation tool. Promotional illustration, not a product screenshot. It describes the extension's current USD-only behavior.
+Approved multi-currency campaign image with a lighter “for Google Flights” subtitle. Exports: 1280×800 store screenshot and 440×280 promo tile. Existing airplane app icon is preserved from published version 0.1.0. Legacy artwork is retained in `legacy/`.
 
-## Exports
+## Generation prompts
 
-- `source.png`: original generated artwork, 1586×992.
-- `store-screenshot-1280x800.png`: 24-bit PNG without alpha for the Chrome Web Store screenshot slot.
-- `store-tile-440x280.png`: 24-bit PNG without alpha for the small promo tile.
-- `../../projects/flights-currency-refresh.webp`: 1280×720 center crop for the homepage.
+### current
 
-Exports use Sharp's center-cover resize. The original published image is retained at `../../projects/flights-currency.webp` for reference. The extension package and icon are unchanged.
+Edit the supplied Google Flights Currency Setter promotional artwork. Preserve its exact overall composition, premium Swiss graphic design, near-black background, off-white typography, acid-yellow boarding-pass motif, fine-line globe and flight path, airplane silhouette, generous spacing and landscape 8:5 aspect ratio. Preserve the large title exactly: "Google Flights" / "Currency" / "Setter". Change the bottom-left supporting copy to exactly: "Prices in your currency." / "Wherever you search." Keep it legible with enough space and no collision with the illustration. Change the ticket illustration to represent multiple selectable currencies rather than USD alone: use a tasteful fan of three overlapping boarding passes, each with a clearly readable code, "USD", "EUR", and "GBP". Keep the front pass acid-yellow, use off-white and a muted acid tint for the other two, dark text. Each currency code must be visibly readable; EUR is the euro code, not EU. Retain the simple airplane motif on the main ticket. Do not introduce flags, Google logos, gradients, app UI, buttons, price numbers, extra taglines, extra text, or a currency dropdown. Maintain the design the user likes and change only the supporting copy and the currency illustration. This is a design preview for an upcoming currency-choice feature, not a screenshot of working software.
 
-## Generation prompt
+### renamed
 
-Use case: ads-marketing. Create one polished Chrome Web Store promotional graphic for the browser extension "Google Flights Currency Setter". Landscape 1600 by 1000, 8:5 ratio. Style: precise Swiss editorial graphic design, understated premium software identity, flat and crisp, aligned to Experimental Software White Room branding but in dark mode. Solid warm near-black (#171715) backdrop, off-white type, a restrained vivid acid yellow (#DFFF00) accent. Main headline on the left, large and highly legible, EXACT text on three lines: "Google Flights\nCurrency\nSetter". Smaller but still readable supporting text at lower left, EXACT text: "Prices in USD.\nWherever you search." On the right use an original elegant abstract boarding-pass/currency graphic: an acid rectangle or ticket with oversized dark "USD", a small simple airplane silhouette and one clean curved flight-path line, fine off-white linework. Balanced negative space, confident asymmetrical composition. Typography should resemble General Sans Regular and Meslo for the small USD detail. All meaningful text and objects inside generous 10% safe margins; the image will also be center-cropped to 16:9 on a website and reduced to 440x280. Nothing tiny. No emoji, no Google logos, no currency picker or invented interface, no other currencies, no gradients, no glow, no 3D, no shadows, no photographs, no trademark affiliation claims, no extra text, no watermark. This is promotional illustration, not an application screenshot.
+Edit the supplied multi-currency promotional artwork to make a naming comparison variant. Change ONLY the large title block on the upper left: replace "Google Flights Currency Setter" with "Flight" on line 1 and "Currency" on line 2, in the same off-white sans-serif type, scale, weight and aligned position. Directly below that two-line title add a smaller but clear line "for Google Flights" in off-white, visibly subordinate to the main title yet readable at thumbnail size. Keep the exact bottom-left copy "Prices in your currency." / "Wherever you search." unchanged. Preserve the entire right-side artwork without changes: the three boarding passes labeled GBP, EUR and USD, the acid-yellow front ticket, airplane silhouette, thin-line globe and flight path. Preserve background, palette, texture, margins and 8:5 landscape proportions. No other additions or changes. This is the same campaign graphic with an alternative product name, not a redesign.
+
+### light
+
+Make one precise typography edit to this Flight Currency promotional image. ONLY change the font weight of the subtitle "for Google Flights" directly beneath the large main heading. Set that subtitle to a noticeably lighter regular weight, approximately General Sans Regular 400 instead of the current bold/semi-bold weight. Keep exactly the same wording, font size, baseline, left alignment, off-white color, and placement. Preserve the big Flight Currency heading, the bottom "Prices in your currency. Wherever you search." copy, all three GBP / EUR / USD boarding passes, the airplane, globe, flight path, background texture, colors and composition completely unchanged. Do not redesign or add anything. Keep the same image dimensions and 8:5 landscape aspect ratio.
+
+
+## Website release coordination
+
+The website card reflects the upcoming currency-picker release 1.1.0. The extension is installed locally and uploaded as a Chrome Web Store draft, not submitted or published. Coordinate the website merge and store release. A replacement privacy policy is prepared at `/legal/flight-currency-privacy.txt`; update the store draft policy URL after that path is publicly available.

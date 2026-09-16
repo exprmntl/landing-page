@@ -65,14 +65,14 @@ export const catalog: CatalogProject[] = [
   },
   {
     id: "flights-currency",
-    name: "Google Flights Currency",
+    name: "Flight Currency",
     category: "Web",
     format: "BROWSER EXTENSION",
-    description: "Keep Google Flights prices in USD instead of changing with your location.",
+    description: "Keep Google Flights prices in your preferred currency, wherever you search.",
     href: "https://chromewebstore.google.com/detail/google-flights-currency-s/nameliafoadmpledepdbcgnogcnfiemo",
     domain: "Chrome Web Store",
     image: "/marketing/projects/flights-currency-refresh.webp",
-    alt: "Google Flights Currency Setter artwork with an acid-yellow USD boarding pass and the message Prices in USD, wherever you search",
+    alt: "Flight Currency for Google Flights with GBP, EUR, and USD boarding passes and the message Prices in your currency, wherever you search",
   },
   {
     id: "badminton",
