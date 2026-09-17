@@ -3,7 +3,7 @@ export const brandCopy = {
   category: "Software lab",
   headline: "From experimentation to production.",
   introduction:
-    "We’re a software lab developing, launching, and growing our own software products, with experimentation shaping what we build and how we build it.",
+    "We’re a software lab developing, launching, and growing software products, with experimentation shaping what we build and how we build it.",
   about:
     "Experimental Software develops and operates a portfolio of software products. We take projects from early experimentation through development and launch, then continue improving and growing them in production. Experimentation shapes both the new projects we pursue and the development of what we’ve already released.",
   description:

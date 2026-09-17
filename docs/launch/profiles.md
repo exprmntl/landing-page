@@ -42,7 +42,7 @@ These fields reuse the approved company language. Public GitHub and LinkedIn pro
 - Website: https://experimental.software/
 - About:
 
-> We’re a software lab developing, launching, and growing our own software products, with experimentation shaping what we build and how we build it.
+> We’re a software lab developing, launching, and growing software products, with experimentation shaping what we build and how we build it.
 >
 > We take projects from early experimentation through development and launch, then continue improving and growing them in production.
 >

@@ -5,7 +5,7 @@
 
 ## From experimentation to production.
 
-We’re a software lab developing, launching, and growing our own software products, with experimentation shaping what we build and how we build it.
+We’re a software lab developing, launching, and growing software products, with experimentation shaping what we build and how we build it.
 
 ### Projects
 
