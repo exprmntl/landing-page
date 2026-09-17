@@ -25,7 +25,7 @@ The website card is the approved **Flight Currency** artwork showing GBP/EUR/USD
 
 Chrome Web Store approval is not a blocker for the homepage launch. Retain the approved artwork and copy. Submission is not represented as public availability.
 
-The prepared privacy route is `https://experimental.software/flight-currency/privacy`. The previously proposed `flightcurrency.experimental.software/privacy` address is not configured by this change. Use one verified reachable URL consistently in the extension listing.
+The privacy route `https://experimental.software/flight-currency/privacy` was published separately in PR #16. The previously proposed `flightcurrency.experimental.software/privacy` address is not configured by this change. The extension task owns the listing URL.
 
 ### Typography provenance
 
@@ -42,7 +42,7 @@ Sources: [upstream README](https://github.com/andreberg/Meslo-Font/blob/09a431d5
 3. Verify production `/`, `/brand`, `/code`, preserved content routes, privacy URL if shipped, project destinations, mobile layout, metadata, icons, and asset downloads. Recheck the RxRecall backlink in initial HTML. Inspect robots, canonical URLs, and sitemap; submit the sitemap to the existing search-console property if available.
 4. Apply the staged GitHub organization avatar, bio, and README. Set the landing-page repository description/social image. Use production asset URLs only after they resolve. Verify Notion and LinkedIn links and finish X account setup.
 5. Transfer Orb UI and Keyboard Layout Tester separately. Verify remotes, Actions, deploy integrations, package publishing, documentation URLs, and redirects. Pin the intended public repositories; do not expose private product repositories.
-6. Confirm actual production analytics and project-click measurement, especially RxRecall. The site has conditional PostHog initialization, but source presence alone does not prove production events arrive.
+6. Recheck production analytics after release, especially the RxRecall card. Prelaunch verification confirmed production pageviews and preview project-click autocapture in the Landing Page project; see the verification notes below.
 7. Announce the refreshed project catalog only after the destination site and profiles are consistent. No announcement is prepared for automatic publication.
 
 ## Validation in this prep
@@ -53,3 +53,11 @@ Sources: [upstream README](https://github.com/andreberg/Meslo-Font/blob/09a431d5
 - Final Vercel preview build checked after pushing.
 
 Production launch checks above remain future actions; they are not represented as already completed.
+
+## Landing-page verification — September 16, 2026
+
+- Checked browser viewports at 320px, 390px, and 768px. No horizontal overflow; project filters return 6/4/1/1 cards; About and Contact retain matching 48px headings. RxRecall opens in a separate tab. These are responsive browser checks, not a physical iOS Safari test.
+- Fixed an inherited mobile rule that hid Contact. All three navigation links remain visible, wrap when needed, and retain 44px-high targets. Verified the Contact jump and footer at 320px locally.
+- PostHog's **Landing Page** project (436298) received the production visit marked `qa=launch-20260917-clean`, plus web vitals. The project feed also contains preview project clicks (including Keyboard Layout Tester), filter clicks, and navigation clicks. Existing autocapture covers these interactions; no custom event or configuration change was needed.
+- The PostHog connector reported a switch to Landing Page but returned queries scoped to Keyboard Layout Tester (339523). Those query results were discarded; verification used the explicitly scoped [Landing Page event feed](https://us.posthog.com/project/436298/activity/explore). A fresh Chrome-controlled preview click was not matched in the feed, so this check does not claim a newly ingested RxRecall click.
+- Focused ESLint, TypeScript, and whitespace checks passed. Regenerated the asset pack after correcting the Meslo notes and verified all 46 manifest checksums, corresponding ZIP entries, and the absence of font binaries.
