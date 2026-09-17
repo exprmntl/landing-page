@@ -146,7 +146,7 @@ export default function Home() {
           </div>
           <div className="marketing-more">
             <span className="marketing-label">ALSO ON THE WORKBENCH</span>
-            <a href="https://keyboard.experimental.software/">
+            <a href="https://keyboardlayout.app/">
               Keyboard Layout Tester <ArrowUpRight size={16} />
             </a>
             <a href="https://chromewebstore.google.com/detail/google-flights-currency-s/nameliafoadmpledepdbcgnogcnfiemo">
