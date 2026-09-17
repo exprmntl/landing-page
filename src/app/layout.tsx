@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { siteDescription, siteName, siteUrl, socialImage } from "./site";
+import { siteDescription, siteName, siteTitle, siteUrl, socialImage } from "./site";
 import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: {
-    default: siteName,
+    default: siteTitle,
     template: `%s | ${siteName}`,
   },
   description: siteDescription,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: siteName,
+    title: siteTitle,
     description: siteDescription,
     url: "/",
     siteName,
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: siteName,
+    title: siteTitle,
     description: siteDescription,
     images: [socialImage.url],
   },

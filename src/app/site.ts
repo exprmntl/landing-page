@@ -1,6 +1,7 @@
 import { brandCopy } from "@/lib/brand-copy";
 
 export const siteName = "Experimental Software";
+export const siteTitle = `${siteName} — A Software Lab`;
 export const siteDescription = brandCopy.description;
 export const siteUrl = new URL("https://experimental.software");
 
