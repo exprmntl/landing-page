@@ -28,7 +28,7 @@ The reference is `/brand#language`, with shared copy in `src/lib/brand-copy.ts`.
 
 - Category: **software lab**.
 - Headline: **From experimentation to production.**
-- Introduction: **We’re a software lab developing, launching, and growing our own software products, with experimentation shaping what we build and how we build it.**
+- Introduction: **We’re a software lab developing, launching, and growing software products, with experimentation shaping what we build and how we build it.**
 - Voice: company-focused, direct, deliberate, and ambitious. Use “we.” The company introduction does not name the founder or narrow the company to current project categories.
 - Navigation and catalog: **Projects**. A product is a project released for ongoing use; an experiment explores or tests an idea. This vocabulary does not require separate public sections or classify all small projects as experiments.
 - Core verbs: **develop, launch, and grow**; **develop and operate** for ongoing company responsibility. Research describes exploration.
