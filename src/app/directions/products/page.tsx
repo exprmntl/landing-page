@@ -60,7 +60,7 @@ export default function ProductsDirection() {
               <TextLink href={orb.href}>{orb.action}</TextLink>
               <a
                 className="products-source-link"
-                href="https://github.com/alexanderqchen/orb-ui"
+                href="https://github.com/exprmntl/orb-ui"
               >
                 View the source ↗
               </a>

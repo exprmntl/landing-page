@@ -307,7 +307,7 @@ export default function BrandPage() {
                   Use real software captures and outputs. Describe what it does, how to
                   try it, and how mature it is.
                 </p>
-                <a href="https://github.com/alexanderqchen/orb-ui">
+                <a href="https://github.com/exprmntl/orb-ui">
                   View Orb UI <ArrowUpRight size={16} />
                 </a>
               </div>
