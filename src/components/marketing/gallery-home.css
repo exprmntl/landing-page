@@ -220,6 +220,15 @@
   }
 }
 @media (max-width: 760px) {
+  .direction-gallery.catalog-home .direction-header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 24px;
+    padding-block: 20px 12px;
+  }
+  .catalog-home .direction-header nav a:last-child {
+    display: inline-flex;
+  }
   .catalog-home .gallery-intro {
     padding-top: 36px;
     padding-bottom: 34px;

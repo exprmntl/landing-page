@@ -21,9 +21,9 @@ All asset text is outlined using the selected fonts; no font binaries are includ
 
 The public [Chrome Web Store listing](https://chromewebstore.google.com/detail/google-flights-currency-s/nameliafoadmpledepdbcgnogcnfiemo) was checked September 16, 2026. It still displays **Google Flights Currency Setter**, version **0.1.0**, updated **April 17, 2024**, and explicitly states: “Currently just sets to USD. Soon you will be able to select any available currency.”
 
-The proposed website card is the approved **Flight Currency** artwork showing GBP/EUR/USD and “Prices in your currency, wherever you search.” Its description promises a preferred currency. That messaging is ahead of the currently installable extension. Store submission/release is owned by the separate extension task and is not authorized by this checklist.
+The website card is the approved **Flight Currency** artwork showing GBP/EUR/USD and “Prices in your currency, wherever you search.” On September 16, the owner confirmed that the extension update has been submitted to the Chrome Web Store and is awaiting approval, and explicitly accepted publishing this card ahead of store approval. Store submission/release remains owned by the separate extension task.
 
-Preferred sequence: publish the privacy policy needed by the store as a separately scoped release if necessary, ship the extension, then release the complete homepage. Alternatively, explicitly choose a temporary card using truthful current-version copy and artwork. Merely changing the description leaves the multi-currency artwork claim in place. Recheck the actual store listing immediately before merging; do not assume submission equals availability.
+Chrome Web Store approval is not a blocker for the homepage launch. Retain the approved artwork and copy. Submission is not represented as public availability.
 
 The prepared privacy route is `https://experimental.software/flight-currency/privacy`. The previously proposed `flightcurrency.experimental.software/privacy` address is not configured by this change. Use one verified reachable URL consistently in the extension listing.
 
@@ -31,13 +31,13 @@ The prepared privacy route is `https://experimental.software/flight-currency/pri
 
 The existing Meslo caveat was rechecked against the original v1.2.1 archive. Its archive checksum still matches the font-preparation script. Upstream master revision is `09a431d546d211130352c28eb0466e5d7d5aeaf0` (January 6, 2013).
 
-The bundled About PDF, page 1, says: “This font is a derivative work of an existing font set” and “If I it is allowed I'll make it public domain in the sense that you can do what you want with it.” Page 5 supplies André Berg's Apache 2.0 notice and retains Apple, Tavmjong Bah, and Bitstream copyrights. These sources do not settle the upstream rights question noted in [font delivery](../brand-fonts.md). The recheck does not establish that use is prohibited, nor does it establish an additional payment requirement. Typography is unchanged; record the release decision rather than silently treating this as resolved.
+The release and README explicitly publish Meslo under Apache 2.0, permitting commercial use without purchase fees. An older tentative public-domain statement in the About PDF prompted the previous caveat, but no evidence of a fee or prohibition on this website's use was found. The font retains upstream notices; its name table has no separate license field. Preserve those notices and the Apache license. The provenance limitation is documented in [font delivery](../brand-fonts.md); it is not a pending font purchase or a new launch approval. General Sans and Meslo remain approved and unchanged.
 
 Sources: [upstream README](https://github.com/andreberg/Meslo-Font/blob/09a431d546d211130352c28eb0466e5d7d5aeaf0/README.textile), [v1.2.1 archive](https://github.com/andreberg/Meslo-Font/blob/09a431d546d211130352c28eb0466e5d7d5aeaf0/dist/v1.2.1/Meslo%20LG%20v1.2.1.zip). No font purchase or new permission grant was obtained.
 
 ## Launch order
 
-1. Resolve the extension/version alignment above and confirm the approved typography decision. Review prepared profiles and artwork. Keep any existing factual LinkedIn fields unless inaccurate.
+1. Retain the approved Flight Currency card and General Sans/Meslo typography. Social profile rollout is handled by separate threads.
 2. Check the final PR revision against current `main`, required checks, production configuration, and rollback target. Update the PR description to match the final scope, then mark ready and merge only when authorized.
 3. Verify production `/`, `/brand`, `/code`, preserved content routes, privacy URL if shipped, project destinations, mobile layout, metadata, icons, and asset downloads. Recheck the RxRecall backlink in initial HTML. Inspect robots, canonical URLs, and sitemap; submit the sitemap to the existing search-console property if available.
 4. Apply the staged GitHub organization avatar, bio, and README. Set the landing-page repository description/social image. Use production asset URLs only after they resolve. Verify Notion and LinkedIn links and finish X account setup.

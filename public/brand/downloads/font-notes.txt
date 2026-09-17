@@ -17,10 +17,11 @@ Terms: https://www.fontshare.com/licenses/itf-ffl
 License copy: /brand/font-licenses/general-sans.txt
 
 Meslo LG S is distributed by its author under Apache 2.0 and has no purchase fee.
-It derives from Apple's Menlo and retains upstream copyright notices. The
-author's release does not establish all upstream Apple redistribution rights;
-that licensing question remains unresolved. Selection here is not a claim of
-legal clearance for every use or permission to redistribute the underlying font.
+The published license permits commercial use. Preserve the license and upstream
+copyright notices. Meslo derives from Apple's Menlo; the release includes older
+tentative public-domain wording alongside its explicit Apache 2.0 notice. This
+is a provenance limitation, not a documented fee or prohibition on website use.
+No font purchase or replacement is pending for the selected brand typography.
 Source: https://github.com/andreberg/Meslo-Font
 Notices: /brand/font-licenses/meslo-notices.txt
 Apache 2.0: /brand/font-licenses/apache-2.0.txt

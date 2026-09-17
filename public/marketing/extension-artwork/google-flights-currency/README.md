@@ -19,4 +19,4 @@ Make one precise typography edit to this Flight Currency promotional image. ONLY
 
 ## Website release coordination
 
-The website card reflects the upcoming currency-picker release 1.1.1. The extension is installed locally and uploaded as a Chrome Web Store draft, not submitted or published. Coordinate the website merge and store release. A replacement privacy policy is prepared at `/flight-currency/privacy`; update the store draft policy URL after that path is publicly available.
+The website card reflects the currency-picker update. On September 16, the owner confirmed that it has been submitted to the Chrome Web Store and is awaiting approval, and approved using this card ahead of the store release. Store approval does not block the homepage merge. The extension task owns the listing and privacy-policy URL; the website includes `/flight-currency/privacy`.
