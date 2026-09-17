@@ -8,6 +8,8 @@ const excludedPrefixes = [
   "dist/",
   "generated/",
   "node_modules/",
+  "public/brand/downloads/",
+  "public/marketing/",
 ];
 
 const excludedSuffixes = [".tsbuildinfo"];

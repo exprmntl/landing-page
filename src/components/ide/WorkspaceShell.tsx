@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import {
   useCallback,
   useEffect,
@@ -66,9 +67,13 @@ function getBrowserPathname() {
 
 interface WorkspaceShellProps {
   initialFileId?: string;
+  navigationMode?: "content" | "source";
 }
 
-export function WorkspaceShell({ initialFileId }: WorkspaceShellProps) {
+export function WorkspaceShell({
+  initialFileId,
+  navigationMode = "content",
+}: WorkspaceShellProps) {
   const initialPathname = usePathname();
   const pathname = useSyncExternalStore(
     subscribeToPathnameChanges,
@@ -77,15 +82,23 @@ export function WorkspaceShell({ initialFileId }: WorkspaceShellProps) {
   );
   const [state, dispatch] = useReducer(workspaceReducer, undefined, () =>
     createInitialWorkspaceState(undefined, initialFileId, {
-      initialOpenFileIds: mainContentFileIds,
+      initialOpenFileIds:
+        navigationMode === "source"
+          ? [
+              "repo:README.md",
+              "repo:src/app/page.tsx",
+              "repo:src/components/marketing/GalleryHome.tsx",
+            ]
+          : mainContentFileIds,
     }),
   );
   const [explorerWidth, setExplorerWidth] = useState(defaultExplorerWidth);
   const [sidebarMode, setSidebarMode] = useState<SidebarMode>("auto");
-  const [activeActivityView, setActiveActivityView] = useState<ActivityView>("explorer");
-  const [expandedExplorerFolderIds, setExpandedExplorerFolderIds] = useState<Set<string>>(() =>
-    getInitiallyExpandedFolderIds(state.tree, state.activeFileId),
-  );
+  const [activeActivityView, setActiveActivityView] =
+    useState<ActivityView>("explorer");
+  const [expandedExplorerFolderIds, setExpandedExplorerFolderIds] = useState<
+    Set<string>
+  >(() => getInitiallyExpandedFolderIds(state.tree, state.activeFileId));
   const [searchQuery, setSearchQuery] = useState("");
   const [revealRequest, setRevealRequest] = useState<EditorRevealRequest | null>(null);
   const [isResizeHandleHoverActive, setIsResizeHandleHoverActive] = useState(false);
@@ -95,7 +108,9 @@ export function WorkspaceShell({ initialFileId }: WorkspaceShellProps) {
   const editorStatesRef = useRef<Record<string, EditorSerializedState>>({});
   const foldRangesRef = useRef<Record<string, EditorFoldRange[]>>({});
   const lastHandledPathnameRef = useRef(pathname);
-  const [cursorPositions, setCursorPositions] = useState<Record<string, EditorCursorPosition>>({});
+  const [cursorPositions, setCursorPositions] = useState<
+    Record<string, EditorCursorPosition>
+  >({});
   const resizeHoverTimerRef = useRef<number | null>(null);
 
   const activeFile = state.activeFileId ? state.filesById[state.activeFileId] : null;
@@ -107,31 +122,32 @@ export function WorkspaceShell({ initialFileId }: WorkspaceShellProps) {
       currentContent: getFileContent(state, file.id),
     }));
   const changedFiles = files.filter(
-    (file) => file.editable && state.editedContents[file.id] !== undefined &&
+    (file) =>
+      file.editable &&
+      state.editedContents[file.id] !== undefined &&
       state.editedContents[file.id] !== file.content,
   );
   const modifiedFileIds = useMemo(
     () => new Set(changedFiles.map((file) => file.id)),
     [changedFiles],
   );
-  const openTabs = state.openTabs.map((fileId) => state.filesById[fileId]).filter(Boolean);
-  const mode = activeFile ? state.editorModes[activeFile.id] ?? "code" : "code";
+  const openTabs = state.openTabs
+    .map((fileId) => state.filesById[fileId])
+    .filter(Boolean);
+  const mode = activeFile ? (state.editorModes[activeFile.id] ?? "code") : "code";
   const content = activeFile ? getFileContent(state, activeFile.id) : "";
   const openPinnedFile = useCallback((fileId: string) => {
     dispatch({ type: "pinFile", fileId });
   }, []);
-  const openSearchMatch = useCallback(
-    (fileId: string, lineNumber: number) => {
-      dispatch({ type: "openFile", fileId });
-      dispatch({ type: "setMode", fileId, mode: "code" });
-      setRevealRequest({
-        fileId,
-        lineNumber,
-        nonce: Date.now(),
-      });
-    },
-    [],
-  );
+  const openSearchMatch = useCallback((fileId: string, lineNumber: number) => {
+    dispatch({ type: "openFile", fileId });
+    dispatch({ type: "setMode", fileId, mode: "code" });
+    setRevealRequest({
+      fileId,
+      lineNumber,
+      nonce: Date.now(),
+    });
+  }, []);
   const commandPaletteCommands = useMemo<CommandPaletteCommand[]>(
     () => [
       {
@@ -144,7 +160,8 @@ export function WorkspaceShell({ initialFileId }: WorkspaceShellProps) {
         id: "github.open-issues",
         label: "GitHub: Open Issues",
         detail: "View repo issues",
-        run: () => window.open(`${githubRepoUrl}/issues`, "_blank", "noopener,noreferrer"),
+        run: () =>
+          window.open(`${githubRepoUrl}/issues`, "_blank", "noopener,noreferrer"),
       },
       {
         id: "file.open-readme",
@@ -187,7 +204,10 @@ export function WorkspaceShell({ initialFileId }: WorkspaceShellProps) {
     (fileId: string) => editorStatesRef.current[fileId] ?? null,
     [],
   );
-  const getFoldRanges = useCallback((fileId: string) => foldRangesRef.current[fileId] ?? [], []);
+  const getFoldRanges = useCallback(
+    (fileId: string) => foldRangesRef.current[fileId] ?? [],
+    [],
+  );
   const clearResizeHoverTimer = useCallback(() => {
     if (resizeHoverTimerRef.current === null) {
       return;
@@ -210,36 +230,40 @@ export function WorkspaceShell({ initialFileId }: WorkspaceShellProps) {
   const resizeExplorerBy = useCallback((delta: number) => {
     setExplorerWidth((current) => clampExplorerWidth(current + delta));
   }, []);
-  const startExplorerResize = useCallback((event: ReactPointerEvent<HTMLDivElement>) => {
-    event.preventDefault();
+  const startExplorerResize = useCallback(
+    (event: ReactPointerEvent<HTMLDivElement>) => {
+      event.preventDefault();
 
-    const startX = event.clientX;
-    const startWidth = explorerWidth;
-    const body = event.currentTarget.ownerDocument.body;
+      const startX = event.clientX;
+      const startWidth = explorerWidth;
+      const body = event.currentTarget.ownerDocument.body;
 
-    clearResizeHoverTimer();
-    setIsResizeHandleHoverActive(true);
-    body.classList.add("is-resizing-explorer");
+      clearResizeHoverTimer();
+      setIsResizeHandleHoverActive(true);
+      body.classList.add("is-resizing-explorer");
 
-    const handlePointerMove = (moveEvent: PointerEvent) => {
-      setExplorerWidth(clampExplorerWidth(startWidth + moveEvent.clientX - startX));
-    };
+      const handlePointerMove = (moveEvent: PointerEvent) => {
+        setExplorerWidth(clampExplorerWidth(startWidth + moveEvent.clientX - startX));
+      };
 
-    const stopResize = () => {
-      body.classList.remove("is-resizing-explorer");
-      window.removeEventListener("pointermove", handlePointerMove);
-      window.removeEventListener("pointerup", stopResize);
-      window.removeEventListener("pointercancel", stopResize);
-    };
+      const stopResize = () => {
+        body.classList.remove("is-resizing-explorer");
+        window.removeEventListener("pointermove", handlePointerMove);
+        window.removeEventListener("pointerup", stopResize);
+        window.removeEventListener("pointercancel", stopResize);
+      };
 
-    window.addEventListener("pointermove", handlePointerMove);
-    window.addEventListener("pointerup", stopResize);
-    window.addEventListener("pointercancel", stopResize);
-  }, [clearResizeHoverTimer, explorerWidth]);
+      window.addEventListener("pointermove", handlePointerMove);
+      window.addEventListener("pointerup", stopResize);
+      window.addEventListener("pointercancel", stopResize);
+    },
+    [clearResizeHoverTimer, explorerWidth],
+  );
   const selectActivityView = useCallback(
     (view: ActivityView) => {
       const autoSidebarOpen = !window.matchMedia(mobileSidebarQuery).matches;
-      const sidebarOpen = sidebarMode === "open" || (sidebarMode === "auto" && autoSidebarOpen);
+      const sidebarOpen =
+        sidebarMode === "open" || (sidebarMode === "auto" && autoSidebarOpen);
 
       if (sidebarOpen && activeActivityView === view) {
         setSidebarMode("closed");
@@ -253,7 +277,7 @@ export function WorkspaceShell({ initialFileId }: WorkspaceShellProps) {
   );
 
   useEffect(() => {
-    if (lastHandledPathnameRef.current === pathname) {
+    if (navigationMode === "source" || lastHandledPathnameRef.current === pathname) {
       return;
     }
 
@@ -265,10 +289,10 @@ export function WorkspaceShell({ initialFileId }: WorkspaceShellProps) {
     }
 
     dispatch({ type: "openFile", fileId: route.fileId });
-  }, [pathname, state.activeFileId]);
+  }, [navigationMode, pathname, state.activeFileId]);
 
   useEffect(() => {
-    if (!state.activeFileId) {
+    if (navigationMode === "source" || !state.activeFileId) {
       return;
     }
 
@@ -280,7 +304,7 @@ export function WorkspaceShell({ initialFileId }: WorkspaceShellProps) {
 
     window.history.pushState(null, "", route.route);
     window.dispatchEvent(new PopStateEvent("popstate"));
-  }, [pathname, state.activeFileId]);
+  }, [navigationMode, pathname, state.activeFileId]);
 
   useEffect(() => {
     const openKeyboardPalette = (event: KeyboardEvent) => {
@@ -323,7 +347,15 @@ export function WorkspaceShell({ initialFileId }: WorkspaceShellProps) {
           <span className="traffic traffic-minimize" />
           <span className="traffic traffic-maximize" />
         </div>
-        <div className="window-title">Experimental Software - landing-page</div>
+        <div className="window-title">
+          {navigationMode === "source" ? (
+            <Link href="/" title="Return to the website">
+              Experimental Software ↗
+            </Link>
+          ) : (
+            "Experimental Software - landing-page"
+          )}
+        </div>
       </header>
 
       <div className="workspace-grid">
@@ -399,7 +431,9 @@ export function WorkspaceShell({ initialFileId }: WorkspaceShellProps) {
             onPinTab={(fileId) => dispatch({ type: "pinFile", fileId })}
             onCloseTab={(fileId) => dispatch({ type: "closeTab", fileId })}
             onCloseOtherTabs={(fileId) => dispatch({ type: "closeOtherTabs", fileId })}
-            onCloseTabsToRight={(fileId) => dispatch({ type: "closeTabsToRight", fileId })}
+            onCloseTabsToRight={(fileId) =>
+              dispatch({ type: "closeTabsToRight", fileId })
+            }
             onReorderTab={(fileId, targetIndex) =>
               dispatch({ type: "reorderTab", fileId, targetIndex })
             }

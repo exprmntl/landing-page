@@ -12,7 +12,8 @@
     "test:watch": "pnpm generate:repo && vitest",
     "generate:repo": "node --import tsx scripts/generate-repo-mirror.ts",
     "prepare:git-history": "node --import tsx scripts/ensure-git-history.ts",
-    "prepare:brand-fonts": "node scripts/prepare-brand-fonts.mjs"
+    "prepare:brand-fonts": "node scripts/prepare-brand-fonts.mjs",
+    "build:brand-assets": "node --import tsx scripts/build-brand-assets.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
@@ -57,8 +58,10 @@
     "eslint": "^9.39.1",
     "eslint-config-next": "latest",
     "fflate": "0.8.2",
+    "fontkit": "2.0.4",
     "jsdom": "latest",
     "prettier": "latest",
+    "sharp": "0.34.5",
     "tailwindcss": "latest",
     "tsx": "latest",
     "typescript": "latest",

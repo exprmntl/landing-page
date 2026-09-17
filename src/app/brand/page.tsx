@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowDown, ArrowUpRight, Download } from "lucide-react";
 import { Outlier } from "@/components/brand/Outlier";
 import { ComponentPlayground } from "@/components/brand/ComponentPlayground";
 import { whiteRoomFonts } from "@/styles/brand-fonts";
+import { brandCopy, brandTerminology } from "@/lib/brand-copy";
 import "./brand.css";
 
 export const metadata: Metadata = {
@@ -11,7 +13,6 @@ export const metadata: Metadata = {
   description:
     "The Experimental Software identity. Original Outlier, White Room, and the foundations for everything we make.",
   alternates: { canonical: "https://experimental.software/brand" },
-  icons: { icon: "/brand/outlier.svg" },
 };
 
 const sections = [
@@ -21,6 +22,7 @@ const sections = [
   "Components",
   "In practice",
   "Assets",
+  "Language",
 ];
 
 function SectionTitle({
@@ -191,11 +193,7 @@ export default function BrandPage() {
               </div>
               <div>
                 <span className="brand-eyebrow">BODY / REGULAR</span>
-                <p className="brand-type-body">
-                  An independent lab building tools, products, and internet experiments.
-                  We follow interesting questions and turn them into software you can
-                  use.
-                </p>
+                <p className="brand-type-body">{brandCopy.introduction}</p>
                 <p>
                   16px / 1.55 line height. Normal spacing.
                   <br />
@@ -320,10 +318,83 @@ export default function BrandPage() {
             <SectionTitle
               number="06"
               title="Start with the originals."
-              description="Use these files as the source of truth. The original mark, the selected palette, and the styling foundation."
+              description="The complete kit: original symbols, outlined wordmarks, avatars, share images, and the styling foundation. Ready to use in light and dark settings."
             />
+            <a
+              className="brand-kit-download"
+              href="/brand/downloads/experimental-software-brand-kit.zip"
+              download
+            >
+              <div>
+                <h3>Download the complete brand kit</h3>
+                <span className="brand-eyebrow">
+                  ZIP · SVG, PNG, TEMPLATES & TOKENS · V1.1
+                </span>
+              </div>
+              <Download size={24} aria-hidden="true" />
+            </a>
+            <div className="brand-asset-previews" aria-label="Included brand assets">
+              <div>
+                <Image
+                  src="/brand/downloads/logos/stacked-ink.svg"
+                  alt="Primary stacked Experimental Software lockup"
+                  width={500}
+                  height={144}
+                />
+                <span className="brand-eyebrow">PRIMARY LOCKUP / OUTLINED SVG</span>
+              </div>
+              <div className="brand-asset-dark">
+                <Image
+                  src="/brand/downloads/logos/stacked-white.svg"
+                  alt="White Experimental Software lockup on ink"
+                  width={500}
+                  height={144}
+                />
+                <span className="brand-eyebrow">REVERSE / FOR DARK SURFACES</span>
+              </div>
+            </div>
             <div className="brand-downloads">
               {[
+                {
+                  name: "Primary lockup / ink",
+                  meta: "SVG · OUTLINED LETTERING",
+                  href: "/brand/downloads/logos/stacked-ink.svg",
+                },
+                {
+                  name: "Primary lockup / white",
+                  meta: "SVG · TRANSPARENT",
+                  href: "/brand/downloads/logos/stacked-white.svg",
+                },
+                {
+                  name: "Horizontal lockup",
+                  meta: "SVG · WIDE PLACEMENTS",
+                  href: "/brand/downloads/logos/horizontal-ink.svg",
+                },
+                {
+                  name: "Wordmark only",
+                  meta: "SVG · GENERAL SANS MEDIUM",
+                  href: "/brand/downloads/logos/wordmark-ink.svg",
+                },
+                {
+                  name: "Profile avatar / paper",
+                  meta: "PNG · 512 × 512",
+                  href: "/brand/downloads/avatars/avatar-paper.png",
+                },
+                {
+                  name: "Profile avatar / ink",
+                  meta: "PNG · 512 × 512",
+                  href: "/brand/downloads/avatars/avatar-ink.png",
+                },
+                {
+                  name: "Company share image",
+                  meta: "PNG · 1200 × 630",
+                  href: "/brand/downloads/social/experimental-software.png",
+                },
+                {
+                  name: "Repository cover template",
+                  meta: "SVG · 1280 × 640",
+                  href: "/brand/downloads/templates/repository-cover.svg",
+                },
                 {
                   name: "Outlier / vector",
                   meta: "SVG · ORIGINAL GEOMETRY",
@@ -353,6 +424,61 @@ export default function BrandPage() {
                   <Download size={19} />
                 </a>
               ))}
+            </div>
+            <p className="brand-asset-note">
+              The ZIP includes SVG and PNG versions, white artwork for dark surfaces,
+              three avatar backgrounds, and usage notes. Wordmarks use vector outlines
+              and display without installed fonts. Font files are not included.{" "}
+              <a href="/brand/downloads/README.md">Read the asset guide ↗</a>
+            </p>
+          </section>
+          <section id="language" className="brand-section">
+            <SectionTitle
+              number="07"
+              title="Experimentation to production."
+              description="The company language: direct, deliberate, and ambitious. Shared with the homepage so the reference and the site stay in step."
+            />
+            <div className="brand-language-example">
+              <span className="brand-eyebrow">HOMEPAGE INTRODUCTION</span>
+              <h3>{brandCopy.headline}</h3>
+              <p>{brandCopy.introduction}</p>
+            </div>
+            <div className="brand-language-terms">
+              {brandTerminology.map(({ term, use }) => (
+                <div key={term}>
+                  <h3>{term}</h3>
+                  <p>{use}</p>
+                </div>
+              ))}
+            </div>
+            <div className="brand-language-about">
+              <span className="brand-eyebrow">ABOUT THE COMPANY</span>
+              <p>{brandCopy.about}</p>
+            </div>
+            <div className="brand-notes-grid">
+              <div>
+                <h3>Speak as the company.</h3>
+                <p>
+                  Use “we” for the lab. Keep the company introduction broad;
+                  project-specific categories and capabilities belong with each project.
+                </p>
+              </div>
+              <div>
+                <h3>Use precise verbs.</h3>
+                <p>
+                  Develop, launch, and grow describe the work. Develop and operate
+                  describe the company’s ongoing responsibility. Use research when
+                  describing exploration.
+                </p>
+              </div>
+              <div>
+                <h3>Keep the catalog clear.</h3>
+                <p>
+                  Projects is the public umbrella term. Use product or experiment when
+                  the distinction helps explain the work. Smaller projects and
+                  maintained products remain part of the catalog.
+                </p>
+              </div>
             </div>
           </section>
           <footer className="brand-footer">

@@ -1,8 +1,8 @@
 # Experimental Software Landing Page
 
-This repo powers [experimental.software](https://experimental.software), a landing page presented as a small VS Code-style web workspace.
+This repo powers [experimental.software](https://experimental.software). The White Room marketing homepage introduces the lab and its projects. The VS Code-style web workspace is available at `/code`, and the brand guide lives at `/brand`.
 
-The site is intentionally a little meta: the file tree shown in the browser is generated from this codebase, and the markdown content files inside `content/` are the actual website content.
+The site is intentionally a little meta: the file tree in `/code` is generated from this codebase. The earlier markdown pages remain in `content/` and are still accessible through their original routes.
 
 ## Architecture
 
@@ -10,7 +10,11 @@ The site is intentionally a little meta: the file tree shown in the browser is g
 
 The Next.js App Router entry points live in `src/app`.
 
-- `src/app/page.tsx` renders the root route and opens `content/README.md`
+- `src/app/page.tsx` renders the Gallery homepage using `src/components/marketing/GalleryHome.tsx`
+- `src/components/marketing/catalog.ts` defines the project order, descriptions, imagery, categories, and new-release marker; all links render in the initial HTML
+- `src/lib/brand-copy.ts` keeps the company introduction, About copy, terminology, and metadata consistent with `/brand#language`
+- `src/app/directions/` keeps the comparison studies, including the first marketing homepage at `/directions/original`; see [homepage direction notes](docs/marketing-directions.md)
+- `src/app/code/page.tsx` preserves the IDE experience and opens this repository README
 - `src/app/[slug]/page.tsx` renders content routes like `/projects`, `/website`, `/about`, and `/contact`
 - `src/app/layout.tsx` defines page metadata, favicons, and social cards
 - `src/app/globals.css` contains the VS Code-inspired visual system
@@ -64,7 +68,11 @@ The browser cannot read the repository filesystem at runtime, so the app generat
 - `generated/repoMirror.ts` contains the file data shown in the Explorer
 - `generated/gitHistory.ts` contains git history for the Source Control panel
 
-The generator keeps the site honest to the source while still avoiding secrets, dependency folders, build output, and other local noise.
+The generator keeps the site honest to the source while still avoiding secrets, dependency folders, build output, and other local noise. Generated brand downloads are excluded to keep binary archives out of the editor bundle; their source script is included.
+
+### Brand asset exports
+
+Run `pnpm prepare:brand-fonts` then `pnpm build:brand-assets` to regenerate the downloadable kit in `public/brand/downloads/`. It includes outlined SVG/PNG lockups, avatars, sharing artwork, a repository-cover template, and design tokens. The source script uses fontkit and sharp at authoring time. Font binaries are never included in the kit. See `docs/brand-fonts.md` for font delivery and license notes.
 
 ## Getting Started
 
