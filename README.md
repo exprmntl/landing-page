@@ -108,7 +108,7 @@ NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN=<ph_project_token>
 
 Add the same variables to the production hosting environment. Session replay must also be enabled for the PostHog project.
 
-PostHog requests use the same-origin `/relay` proxy configured in `next.config.ts`. SDK assets and remote configuration go to `us-assets.i.posthog.com`; events and recordings go to `us.i.posthog.com`. The Wavelength game at `/wavelength` shares this proxy and PostHog project. Proxy traffic, including recordings, counts toward Vercel bandwidth.
+PostHog requests use the PostHog-managed proxy at `https://relay.experimental.software`. The Wavelength game at `/wavelength` shares this proxy and PostHog project. PostHog handles SDK assets, events, recordings, and TLS; this traffic does not pass through Vercel. The `relay` CNAME in Squarespace DNS points to `11d80c63af48d59fb543.cf-prod-us-proxy.proxyhog.com`.
 
 Build for production:
 
