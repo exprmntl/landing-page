@@ -104,10 +104,11 @@ Configure PostHog analytics and session replay:
 
 ```bash
 NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN=<ph_project_token>
-NEXT_PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
 ```
 
 Add the same variables to the production hosting environment. Session replay must also be enabled for the PostHog project.
+
+PostHog requests use the same-origin `/relay` proxy configured in `next.config.ts`. SDK assets and remote configuration go to `us-assets.i.posthog.com`; events and recordings go to `us.i.posthog.com`. The Wavelength game at `/wavelength` shares this proxy and PostHog project. Proxy traffic, including recordings, counts toward Vercel bandwidth.
 
 Build for production:
 

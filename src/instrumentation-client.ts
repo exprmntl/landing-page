@@ -5,7 +5,8 @@ const posthogToken =
 
 if (posthogToken) {
   posthog.init(posthogToken, {
-    api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.i.posthog.com",
+    api_host: "/relay",
+    ui_host: "https://us.posthog.com",
     defaults: "2026-01-30",
   });
 }
