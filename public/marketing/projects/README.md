@@ -3,6 +3,7 @@
 Captured from the live, public interfaces on September 8, 2026 for the Experimental Software homepage layout studies, with additional homepage images captured on September 16. These are static screenshots or published project artwork, not embedded interactive demos. Optimized as WebP without changing the interface content.
 
 - `orb-ui.webp`: https://orb-ui.com/ — live voice demo, cloud theme, simulated signal.
+- `wavelength.webp`: https://experimental.software/wavelength — approved social artwork featuring the game’s dial, reused September 18, 2026.
 - `typechinese.webp`: https://typechinese.io/practice/hsk-1-vocabulary/simplified — practice screen, pinyin enabled, before a typing session.
 - `badminton.webp`: https://badminton.fyi/ — searchable racket database, light theme.
 - `badminton-detail.webp`: https://badminton.fyi/rackets/yonex/astrox-100zz — racket profile, light theme.

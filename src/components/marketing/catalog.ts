@@ -53,6 +53,19 @@ export const catalog: CatalogProject[] = [
     alt: "Orb UI’s live voice demo with an animated cloud orb and theme controls",
   },
   {
+    id: "wavelength",
+    name: "Wavelength",
+    category: "Web",
+    format: "WEB GAME",
+    description:
+      "Give Jev five clues and find out whether you’re on the same wavelength as AI.",
+    href: "https://experimental.software/wavelength",
+    domain: "experimental.software",
+    newRelease: true,
+    image: "/marketing/projects/wavelength.webp",
+    alt: "Wavelength’s colorful dial alongside the question: Are you on the same wavelength as AI?",
+  },
+  {
     id: "keyboard",
     name: "Keyboard Layout Tester",
     category: "Web",
