@@ -99,4 +99,16 @@ export const catalog: CatalogProject[] = [
     image: "/marketing/projects/badminton-detail.webp",
     alt: "A badminton.fyi racket profile with specifications and price information",
   },
+  {
+    id: "codex-updater",
+    name: "Codex Updater",
+    category: "Developer tools",
+    format: "macOS UTILITY",
+    description:
+      "Keep Codex up to date overnight, with scheduled restarts that wait until your tasks are finished.",
+    href: "https://github.com/exprmntl/codex-updater",
+    domain: "GitHub",
+    image: "/marketing/projects/codex-updater-schedule.webp",
+    alt: "Codex Updater with its mint crescent and update-arrow logo and a timeline highlighting the 2–3 a.m. update window",
+  },
 ];
