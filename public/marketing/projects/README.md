@@ -1,5 +1,7 @@
 # Project screenshots
 
+The current badminton.fyi card uses `badminton-editorial.webp`: the owner-selected black-and-white racket close-up with “Find your next racket.” Approved September 20, 2026, replacing the three-racket artwork. This is generated editorial artwork, not a product photograph. Source, social export, and prompts are in `badminton-artwork/editorial.md`.
+
 Captured from the live, public interfaces on September 8, 2026 for the Experimental Software homepage layout studies, with additional homepage images captured on September 16. These are static screenshots or published project artwork, not embedded interactive demos. Optimized as WebP without changing the interface content.
 
 - `orb-ui.webp`: https://orb-ui.com/ — live voice demo, cloud theme, simulated signal.

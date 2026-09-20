@@ -96,8 +96,8 @@ export const catalog: CatalogProject[] = [
       "A badminton racket database for comparing specifications, prices, and popularity.",
     href: "https://badminton.fyi/",
     domain: "badminton.fyi",
-    image: "/marketing/projects/badminton-social.webp",
-    alt: "Find your next racket: three violet, graphite and silver badminton rackets, with the message Compare specs. Find your fit.",
+    image: "/marketing/projects/badminton-editorial.webp",
+    alt: "Find your next racket: a black-and-white badminton racket close-up beside the message Compare specs. Find your fit.",
   },
   {
     id: "codex-updater",
