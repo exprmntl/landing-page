@@ -67,10 +67,10 @@ export const catalog: CatalogProject[] = [
   },
   {
     id: "keyboard",
-    name: "Keyboard Layout Tester",
+    name: "Keyboard Layout Simulator",
     category: "Web",
     format: "WEB TOOL",
-    description: "Try QWERTY, Dvorak and Colemak with free typing practice. No downloads or keyboard settings to change.",
+    description: "Try QWERTY, Dvorak and Colemak in your browser, with typing practice and optional key hints.",
     href: "https://keyboardlayout.app/",
     domain: "keyboardlayout.app",
     image: "/marketing/projects/keyboard-social.webp",

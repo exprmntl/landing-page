@@ -147,7 +147,7 @@ export default function Home() {
           <div className="marketing-more">
             <span className="marketing-label">ALSO ON THE WORKBENCH</span>
             <a href="https://keyboardlayout.app/">
-              Keyboard Layout Tester <ArrowUpRight size={16} />
+              Keyboard Layout Simulator <ArrowUpRight size={16} />
             </a>
             <a href="https://chromewebstore.google.com/detail/google-flights-currency-s/nameliafoadmpledepdbcgnogcnfiemo">
               Google Flights Currency <ArrowUpRight size={16} />
