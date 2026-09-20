@@ -644,23 +644,30 @@
   border: 1px solid var(--border);
 }
 .gallery-project-orb-ui .gallery-project-visual,
-.gallery-project-keyboard .gallery-project-visual,
 .gallery-project-codex-updater .gallery-project-visual,
 .gallery-project-flights-currency .gallery-project-visual {
   background: #171715;
   color: white;
 }
 .gallery-project-orb-ui .gallery-project-topline span,
-.gallery-project-keyboard .gallery-project-topline span,
 .gallery-project-codex-updater .gallery-project-topline span,
 .gallery-project-flights-currency .gallery-project-topline span {
   color: #bec0b7;
 }
 .gallery-project-orb-ui .direction-image,
-.gallery-project-keyboard .direction-image,
 .gallery-project-codex-updater .direction-image,
 .gallery-project-flights-currency .direction-image {
   border-color: #30312d;
+}
+.gallery-project-keyboard .gallery-project-visual {
+  background: #f3efe6;
+  color: #282622;
+}
+.gallery-project-keyboard .gallery-project-topline span {
+  color: #746c61;
+}
+.gallery-project-keyboard .direction-image {
+  border-color: #d9d1c4;
 }
 .gallery-project-copy {
   padding-top: 25px;
