@@ -26,7 +26,7 @@ export default function FlightCurrencyPrivacyPage() {
     <div className={`${whiteRoomFonts} ${styles.page}`}>
       <header className={styles.header}>
         <Link href="/">Experimental Software</Link>
-        <a href="https://github.com/exprmntl/google-flights-currency/issues">
+        <a href="https://github.com/exprmntl/flight-currency/issues">
           Support <span aria-hidden="true">↗</span>
         </a>
       </header>
@@ -95,7 +95,7 @@ export default function FlightCurrencyPrivacyPage() {
           </p>
           <p>
             For questions, visit our{" "}
-            <a href="https://github.com/exprmntl/google-flights-currency/issues">
+            <a href="https://github.com/exprmntl/flight-currency/issues">
               support page
             </a>.
           </p>
