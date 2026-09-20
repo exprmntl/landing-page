@@ -4,6 +4,12 @@ Approved multi-currency campaign image with a lighter “for Google Flights” s
 
 ## Generation prompts
 
+### Social ratio correction — September 20, 2026
+
+`social.webp` is the 1200×630 gallery export, adapted from `source.png` with the built-in image generation tool. The original and store exports are preserved. The full composition fits the gallery without side bars or cropped text.
+
+Prompt: Edit the supplied approved Flight Currency artwork into a wider 1200×630 social image. Preserve the near-black textured background, off-white typography, exact title and supporting copy, three GBP/EUR/USD boarding passes, acid-yellow front ticket, airplane, thin-line globe and flight path. Adapt spacing to the wider canvas without stretching letters or objects, cropping text or tickets, or adding bars or a frame. Keep comfortable margins, title on the left, tickets on the right, supporting copy at bottom left, and the background continuous edge to edge. This is a ratio correction, not a redesign.
+
 ### current
 
 Edit the supplied Google Flights Currency Setter promotional artwork. Preserve its exact overall composition, premium Swiss graphic design, near-black background, off-white typography, acid-yellow boarding-pass motif, fine-line globe and flight path, airplane silhouette, generous spacing and landscape 8:5 aspect ratio. Preserve the large title exactly: "Google Flights" / "Currency" / "Setter". Change the bottom-left supporting copy to exactly: "Prices in your currency." / "Wherever you search." Keep it legible with enough space and no collision with the illustration. Change the ticket illustration to represent multiple selectable currencies rather than USD alone: use a tasteful fan of three overlapping boarding passes, each with a clearly readable code, "USD", "EUR", and "GBP". Keep the front pass acid-yellow, use off-white and a muted acid tint for the other two, dark text. Each currency code must be visibly readable; EUR is the euro code, not EU. Retain the simple airplane motif on the main ticket. Do not introduce flags, Google logos, gradients, app UI, buttons, price numbers, extra taglines, extra text, or a currency dropdown. Maintain the design the user likes and change only the supporting copy and the currency illustration. This is a design preview for an upcoming currency-choice feature, not a screenshot of working software.

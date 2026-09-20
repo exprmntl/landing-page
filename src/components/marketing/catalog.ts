@@ -47,8 +47,8 @@ export const catalog: CatalogProject[] = [
     href: "https://rx-recall.com/",
     domain: "rx-recall.com",
     newRelease: true,
-    image: "/marketing/projects/rxrecall.webp",
-    alt: "RxRecall’s product page showing its Today screen and a Lock Screen widget preview",
+    image: "/marketing/projects/rxrecall-social.jpg",
+    alt: "RxRecall: Top 200 drugs. On your Lock Screen. With Today and Lock Screen previews",
   },
   {
     id: "orb-ui",
@@ -59,8 +59,8 @@ export const catalog: CatalogProject[] = [
       "An open-source React component library for voice agents, with expressive visuals and provider integrations.",
     href: "https://orb-ui.com/",
     domain: "orb-ui.com",
-    image: "/marketing/projects/orb-ui.webp",
-    alt: "Orb UI’s live voice demo with an animated cloud orb and theme controls",
+    image: "/marketing/projects/orb-ui-artwork/homepage-social.png",
+    alt: "Voice agent UI that feels alive: React components for voice agents, beside Orb UI’s cloud orb",
   },
   {
     id: "wavelength",
@@ -94,7 +94,7 @@ export const catalog: CatalogProject[] = [
     description: "Keep Google Flights prices in your preferred currency, wherever you search.",
     href: "https://chromewebstore.google.com/detail/google-flights-currency-s/nameliafoadmpledepdbcgnogcnfiemo",
     domain: "Chrome Web Store",
-    image: "/marketing/projects/flights-currency-refresh.webp",
+    image: "/marketing/extension-artwork/google-flights-currency/social.webp",
     alt: "Flight Currency for Google Flights with GBP, EUR, and USD boarding passes and the message Prices in your currency, wherever you search",
   },
   {
@@ -106,7 +106,7 @@ export const catalog: CatalogProject[] = [
       "A badminton racket database for comparing specifications, prices, and popularity.",
     href: "https://badminton.fyi/",
     domain: "badminton.fyi",
-    image: "/marketing/projects/badminton-editorial.webp",
+    image: "/marketing/projects/badminton-artwork/editorial-social.png",
     alt: "Find your next racket: a black-and-white badminton racket close-up beside the message Compare specs. Find your fit.",
   },
   {
@@ -118,7 +118,7 @@ export const catalog: CatalogProject[] = [
       "Keep Codex up to date overnight, with scheduled restarts that wait until your tasks are finished.",
     href: "https://github.com/exprmntl/codex-updater",
     domain: "GitHub",
-    image: "/marketing/projects/codex-updater-schedule.webp",
+    image: "/marketing/projects/codex-updater-social.png",
     alt: "Codex Updater with its mint crescent and update-arrow logo and a timeline highlighting the 2–3 a.m. update window",
   },
 ];

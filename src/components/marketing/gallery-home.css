@@ -151,6 +151,8 @@
   overflow-wrap: anywhere;
 }
 .catalog-home .direction-image {
+  /* Keep the border outside the artwork's social-image ratio. */
+  box-sizing: content-box;
   aspect-ratio: 1200 / 630;
 }
 .catalog-home .direction-image img {
