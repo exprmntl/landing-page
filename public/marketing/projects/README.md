@@ -1,5 +1,21 @@
 # Project screenshots
 
+## Current gallery exports
+
+All nine gallery images match the 1200×630 social-image slot. Keep this ratio
+when replacing an image: `object-fit: contain` preserves the complete artwork,
+but differently shaped exports will produce bars.
+
+- RxRecall uses `rxrecall-social.jpg`, copied from its published social image at https://rx-recall.com/opengraph-image.jpg?opengraph-image.05in78mhf2hqf.jpg.
+- Orb UI uses `orb-ui-artwork/homepage-social.png`, the approved composition with its actual homepage orb. Editable source and provenance are in that directory.
+- Flight Currency uses `../extension-artwork/google-flights-currency/social.webp`, recomposed for 1200×630 with the complete text and ticket illustration.
+- badminton.fyi uses `badminton-artwork/editorial-social.png`, the selected editorial social export.
+- Codex Updater uses `codex-updater-social.png`, copied unchanged from its repository's `assets/promo/social-card.png`.
+
+## Historical exports and capture notes
+
+The notes below describe earlier exports. The older 16:9 versions are no longer used by the current gallery.
+
 The current badminton.fyi card uses `badminton-editorial.webp`: the owner-selected black-and-white racket close-up with “Find your next racket.” Approved September 20, 2026, replacing the three-racket artwork. This is generated editorial artwork, not a product photograph. Source, social export, and prompts are in `badminton-artwork/editorial.md`.
 
 Captured from the live, public interfaces on September 8, 2026 for the Experimental Software homepage layout studies, with additional homepage images captured on September 16. These are static screenshots or published project artwork, not embedded interactive demos. Optimized as WebP without changing the interface content.
