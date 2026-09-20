@@ -124,6 +124,17 @@
   padding: 3px 7px;
   margin-left: auto;
 }
+.catalog-home .catalog-coming-soon {
+  font: 400 10px/1.5 var(--brand-mono);
+  color: var(--muted-foreground);
+  background: var(--border);
+  padding: 3px 7px;
+  margin-left: auto;
+  white-space: nowrap;
+}
+.catalog-home .gallery-project-epsilon {
+  scroll-margin-top: 28px;
+}
 .catalog-home .gallery-project-topline > svg {
   margin-left: auto;
   flex-shrink: 0;
@@ -146,7 +157,8 @@
   height: 100%;
   object-fit: contain;
 }
-.catalog-home .gallery-project-link {
+.catalog-home .gallery-project-link,
+.catalog-home .gallery-project-content {
   display: flex;
   flex-direction: column;
   height: 100%;

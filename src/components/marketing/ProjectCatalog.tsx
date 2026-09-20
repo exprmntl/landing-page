@@ -15,41 +15,60 @@ function ProjectCard({
   project: CatalogProject;
   priority: boolean;
 }) {
-  return (
-    <article className={`gallery-project gallery-project-${project.id}`}>
-      <a
-        href={project.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="gallery-project-link"
-        aria-label={`Explore ${project.name} (opens in a new tab)`}
-      >
-        <div className="gallery-project-visual">
-          <div className="gallery-project-topline">
-            <span className="direction-label">{project.domain}</span>
-            {project.newRelease && <span className="catalog-new">NEW</span>}
+  const content = (
+    <>
+      <div className="gallery-project-visual">
+        <div className="gallery-project-topline">
+          <span className="direction-label">{project.domain ?? "IN THE LAB"}</span>
+          {project.newRelease && <span className="catalog-new">NEW</span>}
+          {project.comingSoon ? (
+            <span className="catalog-coming-soon">COMING SOON</span>
+          ) : (
             <ArrowUpRight size={20} aria-hidden="true" />
-          </div>
-          <div className={`direction-image direction-image-${project.id}`}>
-            <Image
-              src={project.image}
-              alt={project.alt}
-              width={1200}
-              height={630}
-              sizes="(max-width: 760px) calc(100vw - 80px), (max-width: 1279px) 34vw, 25vw"
-              priority={priority}
-            />
-          </div>
+          )}
         </div>
-        <div className="gallery-project-copy">
-          <p className="direction-label">{project.format}</p>
-          <h3>{project.name}</h3>
-          <p>{project.description}</p>
+        <div className={`direction-image direction-image-${project.id}`}>
+          <Image
+            src={project.image}
+            alt={project.alt}
+            width={1200}
+            height={630}
+            sizes="(max-width: 760px) calc(100vw - 80px), (max-width: 1279px) 34vw, 25vw"
+            priority={priority}
+          />
+        </div>
+      </div>
+      <div className="gallery-project-copy">
+        <p className="direction-label">{project.format}</p>
+        <h3>{project.name}</h3>
+        <p>{project.description}</p>
+        {!project.comingSoon && (
           <span className="gallery-visit">
             Explore {project.name} <ArrowUpRight size={16} aria-hidden="true" />
           </span>
-        </div>
-      </a>
+        )}
+      </div>
+    </>
+  );
+
+  return (
+    <article
+      id={`project-${project.id}`}
+      className={`gallery-project gallery-project-${project.id}`}
+    >
+      {project.comingSoon ? (
+        <div className="gallery-project-content">{content}</div>
+      ) : (
+        <a
+          href={project.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="gallery-project-link"
+          aria-label={`Explore ${project.name} (opens in a new tab)`}
+        >
+          {content}
+        </a>
+      )}
     </article>
   );
 }
@@ -94,11 +113,11 @@ export function ProjectCatalog() {
       </div>
       <div id="project-results">
         <div className="gallery-grid">
-          {visible.map((project) => (
+          {visible.map((project, index) => (
             <ProjectCard
               key={project.id}
               project={project}
-              priority={project.id === "typechinese" || project.id === "rxrecall"}
+              priority={index < 3}
             />
           ))}
         </div>
