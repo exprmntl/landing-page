@@ -73,7 +73,7 @@ export const catalog: CatalogProject[] = [
     description: "Try QWERTY, Dvorak and Colemak in your browser, with typing practice and optional key hints.",
     href: "https://keyboardlayout.app/",
     domain: "keyboardlayout.app",
-    image: "/marketing/projects/keyboard-social.webp",
+    image: "/marketing/projects/keyboard-social.png",
     alt: "Try a different way to type: QWERTY, Dvorak and Colemak, with ivory, charcoal and orange Q, D and C keycaps",
   },
   {
