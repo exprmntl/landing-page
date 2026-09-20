@@ -88,7 +88,7 @@ export function SmallExperiments() {
         Keyboard Layout Simulator
       </TextLink>
       <TextLink href="https://chromewebstore.google.com/detail/google-flights-currency-s/nameliafoadmpledepdbcgnogcnfiemo">
-        Google Flights Currency
+        Flight Currency
       </TextLink>
     </aside>
   );

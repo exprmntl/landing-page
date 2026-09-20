@@ -150,7 +150,7 @@ export default function Home() {
               Keyboard Layout Simulator <ArrowUpRight size={16} />
             </a>
             <a href="https://chromewebstore.google.com/detail/google-flights-currency-s/nameliafoadmpledepdbcgnogcnfiemo">
-              Google Flights Currency <ArrowUpRight size={16} />
+              Flight Currency <ArrowUpRight size={16} />
             </a>
           </div>
         </section>
