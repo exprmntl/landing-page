@@ -85,7 +85,7 @@ export function SmallExperiments() {
     <aside className="direction-small-work">
       <span className="direction-label">SMALLER EXPERIMENTS</span>
       <TextLink href="https://keyboardlayout.app/">
-        Keyboard Layout Tester
+        Keyboard Layout Simulator
       </TextLink>
       <TextLink href="https://chromewebstore.google.com/detail/google-flights-currency-s/nameliafoadmpledepdbcgnogcnfiemo">
         Google Flights Currency
