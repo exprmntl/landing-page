@@ -6,15 +6,25 @@ export type CatalogProject = {
   category: ProjectCategory;
   format: string;
   description: string;
-  href: string;
-  domain: string;
-  newRelease?: boolean;
   image: string;
   alt: string;
-};
+} & (
+  | { comingSoon: true; href?: never; domain?: never; newRelease?: never }
+  | { comingSoon?: false; href: string; domain: string; newRelease?: boolean }
+);
 
 // Display order reflects the catalog, not a ranking or an internal maintenance status.
 export const catalog: CatalogProject[] = [
+  {
+    id: "epsilon",
+    name: "Project Epsilon",
+    category: "Developer tools",
+    format: "API",
+    description: "A new API from Experimental Software. Details to come.",
+    comingSoon: true,
+    image: "/marketing/projects/project-epsilon/cover.webp",
+    alt: "Project Epsilon in black type beside a geometric epsilon symbol, with a small acid-yellow accent on white",
+  },
   {
     id: "typechinese",
     name: "TypeChinese",
