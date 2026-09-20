@@ -1,0 +1,7 @@
+/* Approved palette; opt in during the website redesign. */
+:root {
+  --typechinese-red: #D03030;
+  --typechinese-ink: #202124;
+  --typechinese-background: #F6F4EE;
+  --typechinese-card-background: #FFFFFF;
+}

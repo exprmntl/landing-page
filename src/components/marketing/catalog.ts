@@ -21,11 +21,11 @@ export const catalog: CatalogProject[] = [
     category: "Web",
     format: "WEB APP",
     description:
-      "Chinese typing practice with vocabulary, real passages, and support for Simplified and Traditional Chinese.",
+      "Build Chinese typing speed with vocabulary and real passages, in Simplified or Traditional Chinese.",
     href: "https://typechinese.io/",
     domain: "typechinese.io",
-    image: "/marketing/projects/typechinese-home.webp",
-    alt: "TypeChinese’s landing page introducing Chinese typing practice",
+    image: "/marketing/projects/typechinese-artwork/social/social.png",
+    alt: "Type Chinese faster. Build speed. Learn as you go. Ivory keycaps marked 中 and 文 beside a red return key",
   },
   {
     id: "rxrecall",

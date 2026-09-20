@@ -20,3 +20,7 @@ Captured from the live, public interfaces on September 8, 2026 for the Experimen
 - `flights-currency-refresh.webp`: approved Flight Currency promotional illustration generated September 16, cropped to 16:9 for the Gallery. It shows GBP, EUR, and USD boarding passes, with a lighter “for Google Flights” subtitle and “Prices in your currency. Wherever you search.” copy. It is campaign artwork for the upcoming currency-picker release, not an application screenshot. Source, Chrome Web Store exports, and generation notes are in `../extension-artwork/google-flights-currency/`. The owner confirmed store submission and approved publishing this card while approval is pending; store release is handled separately.
 
 Racket prices and product UI reflect the capture date. The homepage copy avoids treating captured prices as current offers. Follow the project links to use the live products.
+
+## TypeChinese approved identity and social image
+
+The TypeChinese card uses `typechinese-artwork/social/social.png`, the approved 1200 × 630 keycap image with the 中 speech bubble and General Sans Medium wordmark. Brand assets, font, license, and the shared #F6F4EE background palette are in `typechinese-artwork/brand/`. All three original social alternatives are preserved in `typechinese-artwork/variants/`. Gallery images use the social-image aspect ratio and contain the full image without cropping. Other project thumbnail selections are unchanged.

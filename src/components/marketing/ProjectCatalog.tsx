@@ -34,8 +34,8 @@ function ProjectCard({
             <Image
               src={project.image}
               alt={project.alt}
-              width={1280}
-              height={720}
+              width={1200}
+              height={630}
               sizes="(max-width: 760px) calc(100vw - 80px), (max-width: 1279px) 34vw, 25vw"
               priority={priority}
             />
