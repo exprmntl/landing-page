@@ -58,6 +58,82 @@
 .brand-footer {
   font: 400 12px/1.5 var(--brand-mono);
 }
+
+.brand-wallpaper-collection {
+  display: grid;
+  gap: 40px;
+}
+.brand-wallpaper-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+.brand-wallpaper-heading h3 {
+  font-size: 22px;
+}
+.brand-wallpaper-family > p {
+  margin: 8px 0 20px;
+  font-size: 14px;
+  color: var(--muted-foreground);
+}
+.brand-wallpaper-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.brand-wallpaper-phones {
+  max-width: 560px;
+}
+.brand-wallpaper-pair figure {
+  margin: 0;
+  min-width: 0;
+}
+.brand-wallpaper-pair figure > a {
+  display: block;
+  border: 1px solid var(--border);
+}
+.brand-wallpaper-pair img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.brand-wallpaper-pair figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 6px;
+  font-size: 14px;
+}
+.brand-wallpaper-pair figcaption div {
+  display: flex;
+  gap: 12px;
+}
+.brand-wallpaper-pair figcaption a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 44px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (max-width: 700px) {
+  .brand-wallpaper-pair {
+    grid-template-columns: 1fr;
+  }
+  .brand-wallpaper-phones {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .brand-wallpaper-phones figcaption {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .brand-wallpaper-heading {
+    flex-wrap: wrap;
+  }
+}
 .brand-header-title {
   color: var(--muted-foreground);
 }
