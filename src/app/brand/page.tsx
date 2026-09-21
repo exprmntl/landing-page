@@ -446,7 +446,7 @@ export default function BrandPage() {
             >
               <div>
                 <h3>Download wallpapers & banners</h3>
-                <span className="brand-eyebrow">8 DESIGNS · PNG & SVG</span>
+                <span className="brand-eyebrow">10 DESIGNS · PNG & SVG</span>
               </div>
               <Download size={24} aria-hidden="true" />
             </a>
@@ -454,10 +454,17 @@ export default function BrandPage() {
               {[
                 {
                   id: "iphone",
-                  name: "iPhone",
+                  name: "iPhone Lock Screen",
                   width: 1320,
                   height: 2868,
                   note: "Space for the clock and lock screen controls.",
+                },
+                {
+                  id: "iphone-home",
+                  name: "iPhone Home Screen",
+                  width: 1320,
+                  height: 2868,
+                  note: "A clear app area, with the mark and wordmark beside Search. Choose this image separately for your Home Screen and turn Blur off.",
                 },
                 {
                   id: "macos",
@@ -490,7 +497,7 @@ export default function BrandPage() {
                   </div>
                   <p>{asset.note}</p>
                   <div
-                    className={`brand-wallpaper-pair${asset.id === "iphone" ? " brand-wallpaper-phones" : ""}`}
+                    className={`brand-wallpaper-pair${asset.id.startsWith("iphone") ? " brand-wallpaper-phones" : ""}`}
                   >
                     {["paper", "ink"].map((variant) => {
                       const base = `/brand/downloads/wallpapers`;

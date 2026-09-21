@@ -12,7 +12,7 @@ Reference: https://experimental.software/brand
 - covers/: centered 1500 × 600 Notion cover, 1128 × 191 LinkedIn company banner, and 1500 × 500 X profile header, SVG + PNG. Keep cover positioning centered; social banners reserve space for overlapping avatars.
 - templates/: 1280 × 640 repository cover layout, SVG + PNG. “Project name” is a placeholder, not a launched product. Regenerate from the source script with the actual name and description.
 - theme/: CSS and JSON design tokens.
-- wallpapers/: iPhone (1320 × 2868), macOS (3840 × 2400), personal LinkedIn (1584 × 396), and X (1500 × 500) designs, each in paper and ink. PNG + outlined SVG, with a separate ZIP and usage notes.
+- wallpapers/: iPhone Lock Screen and Home Screen (1320 × 2868), macOS (3840 × 2400), personal LinkedIn (1584 × 396), and X (1500 × 500) designs, each in paper and ink. PNG + outlined SVG, with a separate ZIP and usage notes.
 - font-notes.txt and font-licenses/: font setup and license information. Font files are not included.
 - manifest.json: SHA-256 checksums for the exported files.
 

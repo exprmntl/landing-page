@@ -4,7 +4,8 @@ White Room 1.1 — https://experimental.software/brand#wallpapers
 
 Each design comes in paper (light) and ink (dark), as a ready-to-use PNG and an SVG with outlined lettering.
 
-- iPhone: 1320 × 2868. Keep wallpaper zoom at minimum. The clock and bottom controls have clear space; other iPhone sizes may crop slightly.
+- iPhone Lock Screen: 1320 × 2868. Keep wallpaper zoom at minimum. The clock and bottom controls have clear space; other iPhone sizes may crop slightly.
+- iPhone Home Screen: 1320 × 2868. A blank app area with the Outlier mark left of Search and the wordmark to its right. In Wallpaper settings, customize the Home Screen separately, choose this photo, turn Blur off, and avoid zooming. Placement is designed around the supplied layout with Search above the dock; other layouts may need adjustment.
 - macOS: 3840 × 2400, 16:10. The centered design also accommodates a 16:9 display crop.
 - LinkedIn: 1584 × 396. For personal profiles, not company pages.
 - X / Twitter: 1500 × 500. Space is reserved for the profile photo.
