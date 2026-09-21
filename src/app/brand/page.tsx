@@ -22,6 +22,7 @@ const sections = [
   "Components",
   "In practice",
   "Assets",
+  "Wallpapers",
   "Language",
 ];
 
@@ -318,7 +319,7 @@ export default function BrandPage() {
             <SectionTitle
               number="06"
               title="Start with the originals."
-              description="The complete kit: original symbols, outlined wordmarks, avatars, share images, and the styling foundation. Ready to use in light and dark settings."
+              description="The complete kit: original symbols, outlined wordmarks, avatars, share images, wallpapers, profile banners, and the styling foundation. Ready to use in light and dark settings."
             />
             <a
               className="brand-kit-download"
@@ -432,9 +433,117 @@ export default function BrandPage() {
               <a href="/brand/downloads/README.md">Read the asset guide ↗</a>
             </p>
           </section>
-          <section id="language" className="brand-section">
+          <section id="wallpapers" className="brand-section">
             <SectionTitle
               number="07"
+              title="Make yourself at home."
+              description="Wallpapers for iPhone and Mac, plus personal profile banners for LinkedIn and X. Every design comes in paper and ink."
+            />
+            <a
+              className="brand-kit-download"
+              href="/brand/downloads/wallpapers/experimental-software-wallpapers-and-banners.zip"
+              download
+            >
+              <div>
+                <h3>Download wallpapers & banners</h3>
+                <span className="brand-eyebrow">8 DESIGNS · PNG & SVG</span>
+              </div>
+              <Download size={24} aria-hidden="true" />
+            </a>
+            <div className="brand-wallpaper-collection">
+              {[
+                {
+                  id: "iphone",
+                  name: "iPhone",
+                  width: 1320,
+                  height: 2868,
+                  note: "Space for the clock and lock screen controls.",
+                },
+                {
+                  id: "macos",
+                  name: "macOS",
+                  width: 3840,
+                  height: 2400,
+                  note: "A quiet desktop, sized for 16:10 displays.",
+                },
+                {
+                  id: "linkedin",
+                  name: "LinkedIn",
+                  width: 1584,
+                  height: 396,
+                  note: "For personal profiles, with room for your profile photo.",
+                },
+                {
+                  id: "x",
+                  name: "X / Twitter",
+                  width: 1500,
+                  height: 500,
+                  note: "A profile banner with space for your photo.",
+                },
+              ].map((asset) => (
+                <div className="brand-wallpaper-family" key={asset.id}>
+                  <div className="brand-wallpaper-heading">
+                    <h3>{asset.name}</h3>
+                    <span className="brand-eyebrow">
+                      {asset.width} × {asset.height}
+                    </span>
+                  </div>
+                  <p>{asset.note}</p>
+                  <div
+                    className={`brand-wallpaper-pair${asset.id === "iphone" ? " brand-wallpaper-phones" : ""}`}
+                  >
+                    {["paper", "ink"].map((variant) => {
+                      const base = `/brand/downloads/wallpapers`;
+                      const name = `${asset.id}-${variant}`;
+                      const label = `${asset.name} / ${variant}`;
+                      return (
+                        <figure key={variant}>
+                          <a
+                            href={`${base}/png/${name}.png`}
+                            aria-label={`View ${label}`}
+                          >
+                            <Image
+                              src={`${base}/svg/${name}.svg`}
+                              alt={`Experimental Software ${asset.name} ${variant === "paper" ? "light" : "dark"} design`}
+                              width={asset.width}
+                              height={asset.height}
+                            />
+                          </a>
+                          <figcaption>
+                            <span>{variant === "paper" ? "Paper" : "Ink"}</span>
+                            <div>
+                              <a
+                                href={`${base}/png/${name}.png`}
+                                download
+                                aria-label={`Download ${label} PNG`}
+                              >
+                                PNG <ArrowDown size={14} aria-hidden="true" />
+                              </a>
+                              <a
+                                href={`${base}/svg/${name}.svg`}
+                                download
+                                aria-label={`Download ${label} SVG`}
+                              >
+                                SVG <ArrowDown size={14} aria-hidden="true" />
+                              </a>
+                            </div>
+                          </figcaption>
+                        </figure>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="brand-asset-note">
+              PNGs are ready to use. SVGs stay sharp at any size and need no installed
+              fonts. Device and profile crops may vary. These designs are also included
+              in the complete brand kit.
+            </p>
+          </section>
+          <section id="language" className="brand-section">
+            <SectionTitle
+              number="08"
               title="Experimentation to production."
               description="The company language: direct, deliberate, and ambitious. Shared with the homepage so the reference and the site stay in step."
             />

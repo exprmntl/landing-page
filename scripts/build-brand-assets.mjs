@@ -214,19 +214,46 @@ await artwork(
 );
 
 // Leave the left side clear for the platform's overlapping profile avatar.
-for (const [name, width, height, x, baseline, size, maxWidth, lineHeight, badgeY, badgeSize] of [
+for (const [
+  name,
+  width,
+  height,
+  x,
+  baseline,
+  size,
+  maxWidth,
+  lineHeight,
+  badgeY,
+  badgeSize,
+] of [
   ["linkedin-company", 1128, 191, 320, 70, 48, 760, 52, 144, 14],
   ["x-profile", 1500, 500, 480, 182, 64, 920, 74, 306, 24],
 ]) {
-  const label = text(mono, brandCopy.category.toUpperCase(), x + 12, badgeY + badgeSize + 5, badgeSize);
+  const label = text(
+    mono,
+    brandCopy.category.toUpperCase(),
+    x + 12,
+    badgeY + badgeSize + 5,
+    badgeSize,
+  );
   await artwork(
     `covers/${name}`,
     svg(
       width,
       height,
       `Experimental Software / ${name} banner`,
-      wrappedText(regular, brandCopy.headline, x, baseline, size, maxWidth, lineHeight, -0.03) +
-        `<path fill="${acid}" d="M${x} ${badgeY}h${label.width + 24}v${badgeSize + 12}H${x}Z"/>` + label.markup,
+      wrappedText(
+        regular,
+        brandCopy.headline,
+        x,
+        baseline,
+        size,
+        maxWidth,
+        lineHeight,
+        -0.03,
+      ) +
+        `<path fill="${acid}" d="M${x} ${badgeY}h${label.width + 24}v${badgeSize + 12}H${x}Z"/>` +
+        label.markup,
       ink,
       paper,
     ),
@@ -271,6 +298,33 @@ await writeFile("public/favicon.ico", ico);
 await writeFile("public/favicon.svg", favicon);
 await writeFile("public/social.png", files["social/experimental-software.png"]);
 
+// Preserve the approved wallpaper masters byte-for-byte in both download kits.
+const wallpaperFiles = {};
+for (const kind of ["iphone", "macos", "linkedin", "x"]) {
+  for (const variant of ["paper", "ink"]) {
+    for (const format of ["png", "svg"]) {
+      const name = `${format}/${kind}-${variant}.${format}`;
+      const bytes = await readFile(join(output, "wallpapers", name));
+      wallpaperFiles[name] = bytes;
+      await save(`wallpapers/${name}`, bytes);
+    }
+  }
+}
+wallpaperFiles["README.md"] = await readFile(join(output, "wallpapers/README.md"));
+await save("wallpapers/README.md", wallpaperFiles["README.md"]);
+await save(
+  "wallpapers/experimental-software-wallpapers-and-banners.zip",
+  zipSync(
+    Object.fromEntries(
+      Object.entries(wallpaperFiles).map(([name, data]) => [
+        name,
+        [data, { mtime: new Date("2026-09-20T12:00:00Z") }],
+      ]),
+    ),
+    { level: 6 },
+  ),
+);
+
 const readme = `# Experimental Software — White Room asset pack 1.1
 
 Approved identity: original Outlier, General Sans, and Meslo LG S.
@@ -285,6 +339,7 @@ Reference: https://experimental.software/brand
 - covers/: centered 1500 × 600 Notion cover, 1128 × 191 LinkedIn company banner, and 1500 × 500 X profile header, SVG + PNG. Keep cover positioning centered; social banners reserve space for overlapping avatars.
 - templates/: 1280 × 640 repository cover layout, SVG + PNG. “Project name” is a placeholder, not a launched product. Regenerate from the source script with the actual name and description.
 - theme/: CSS and JSON design tokens.
+- wallpapers/: iPhone (1320 × 2868), macOS (3840 × 2400), personal LinkedIn (1584 × 396), and X (1500 × 500) designs, each in paper and ink. PNG + outlined SVG, with a separate ZIP and usage notes.
 - font-notes.txt and font-licenses/: font setup and license information. Font files are not included.
 - manifest.json: SHA-256 checksums for the exported files.
 
