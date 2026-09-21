@@ -2,6 +2,8 @@
 
 ## Current gallery exports
 
+Emote uses `emote-social.png`, copied unchanged from the approved social image at https://useemote.com/social/emote-social-card.png on September 21, 2026. It replaces the Project Epsilon teaser. The 1730×909 source preserves the full composition in the gallery's approximately 1.9:1 slot.
+
 All nine gallery images match the 1200×630 social-image slot. Keep this ratio
 when replacing an image: `object-fit: contain` preserves the complete artwork,
 but differently shaped exports will produce bars.

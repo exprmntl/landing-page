@@ -16,14 +16,16 @@ export type CatalogProject = {
 // Display order reflects the catalog, not a ranking or an internal maintenance status.
 export const catalog: CatalogProject[] = [
   {
-    id: "epsilon",
-    name: "Project Epsilon",
+    id: "emote",
+    name: "Emote",
     category: "Developer tools",
     format: "API",
-    description: "A new API from Experimental Software. Details to come.",
-    comingSoon: true,
-    image: "/marketing/projects/project-epsilon/cover.webp",
-    alt: "Project Epsilon in black type beside a geometric epsilon symbol, with a small acid-yellow accent on white",
+    description: "Let your AI agent react to messages. You choose its personality and the reactions it can use.",
+    href: "https://useemote.com/",
+    domain: "useemote.com",
+    newRelease: true,
+    image: "/marketing/projects/emote-social.png",
+    alt: "Emote: The reaction API for AI agents, beside a chat message saying That worked! with a celebration reaction",
   },
   {
     id: "typechinese",
