@@ -218,23 +218,23 @@
     },
     {
       "file": "wallpapers/png/iphone-home-paper.png",
-      "bytes": 30288,
-      "sha256": "43cd26c5a10abd7ac4397b72c4e80417bad8b9b8314017b36d42d2d551b04d69"
+      "bytes": 30340,
+      "sha256": "3f2b9cf6754485108d10857e511f3fccd62f9dcaf0dfd6037960d7e161d24284"
     },
     {
       "file": "wallpapers/svg/iphone-home-paper.svg",
-      "bytes": 6146,
-      "sha256": "a1c9d39493d5563ac574ae6892399010575ac2b63a9e27b7544c550986876f18"
+      "bytes": 6189,
+      "sha256": "bd7d04908bb5fdfb20fbdfd4525786a51d0b88623bb5dba4e51bbd459b1ef516"
     },
     {
       "file": "wallpapers/png/iphone-home-ink.png",
-      "bytes": 92067,
-      "sha256": "759ec545ce68a77e3fdadf116ca22ce773d05c577a5ec37ca0f7fddd74b91b4e"
+      "bytes": 92152,
+      "sha256": "98cd546a5434e471d75290366c0a3e1479147030a919dcb81580a89ce4278011"
     },
     {
       "file": "wallpapers/svg/iphone-home-ink.svg",
-      "bytes": 6146,
-      "sha256": "f2a0465052dd05e027ff499fdf797af933a867c192d0082da3c0d523172b09c2"
+      "bytes": 6189,
+      "sha256": "d36099d40058db365c91e28d95434c3274acba6a7e035d28bf53bccc6fc77248"
     },
     {
       "file": "wallpapers/png/macos-paper.png",
@@ -298,13 +298,13 @@
     },
     {
       "file": "wallpapers/README.md",
-      "bytes": 1245,
-      "sha256": "a89879da0c0155fcdd7e45c43dfe768861a0f159f45db551f64156c8377817b3"
+      "bytes": 1370,
+      "sha256": "5e9ab0cb02806c4f808d11e59eb5e63900c6320347847a425342df020b2e71f0"
     },
     {
       "file": "wallpapers/experimental-software-wallpapers-and-banners.zip",
-      "bytes": 285937,
-      "sha256": "4f90fcdee49af3a0c039f85b31647d63d42f9436944283573d0a767a40194850"
+      "bytes": 286090,
+      "sha256": "2abeaa5d1c191e5fa51cea53f232dd8aa145fc168781ce8bb445373bf7179e9d"
     },
     {
       "file": "README.md",
