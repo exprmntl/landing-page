@@ -85,6 +85,9 @@
 .brand-wallpaper-phones {
   max-width: 560px;
 }
+.brand-wallpaper-single {
+  grid-template-columns: minmax(0, 1fr);
+}
 .brand-wallpaper-pair figure {
   margin: 0;
   min-width: 0;

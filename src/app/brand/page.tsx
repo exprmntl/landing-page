@@ -437,7 +437,7 @@ export default function BrandPage() {
             <SectionTitle
               number="07"
               title="Make yourself at home."
-              description="Wallpapers for iPhone and Mac, plus personal profile banners for LinkedIn and X. Every design comes in paper and ink."
+              description="Wallpapers for iPhone and Mac, plus personal profile banners for LinkedIn and X."
             />
             <a
               className="brand-kit-download"
@@ -446,7 +446,7 @@ export default function BrandPage() {
             >
               <div>
                 <h3>Download wallpapers & banners</h3>
-                <span className="brand-eyebrow">10 DESIGNS · PNG & SVG</span>
+                <span className="brand-eyebrow">PNG & SVG</span>
               </div>
               <Download size={24} aria-hidden="true" />
             </a>
@@ -469,9 +469,9 @@ export default function BrandPage() {
                 {
                   id: "macos",
                   name: "macOS",
-                  width: 3840,
-                  height: 2400,
-                  note: "A quiet desktop, sized for 16:10 displays.",
+                  width: 5120,
+                  height: 2880,
+                  note: "A muted gray desktop with corner branding, sized for 5K, 16:9 displays.",
                 },
                 {
                   id: "linkedin",
@@ -485,7 +485,7 @@ export default function BrandPage() {
                   name: "X / Twitter",
                   width: 1500,
                   height: 500,
-                  note: "A profile banner with space for your photo.",
+                  note: "Balanced for desktop and mobile, with room for your profile photo and app controls.",
                 },
               ].map((asset) => (
                 <div className="brand-wallpaper-family" key={asset.id}>
@@ -497,47 +497,55 @@ export default function BrandPage() {
                   </div>
                   <p>{asset.note}</p>
                   <div
-                    className={`brand-wallpaper-pair${asset.id.startsWith("iphone") ? " brand-wallpaper-phones" : ""}`}
+                    className={`brand-wallpaper-pair${asset.id.startsWith("iphone") ? " brand-wallpaper-phones" : ""}${asset.id === "macos" ? " brand-wallpaper-single" : ""}`}
                   >
-                    {["paper", "ink"].map((variant) => {
-                      const base = `/brand/downloads/wallpapers`;
-                      const name = `${asset.id}-${variant}`;
-                      const label = `${asset.name} / ${variant}`;
-                      return (
-                        <figure key={variant}>
-                          <a
-                            href={`${base}/png/${name}.png`}
-                            aria-label={`View ${label}`}
-                          >
-                            <Image
-                              src={`${base}/svg/${name}.svg`}
-                              alt={`Experimental Software ${asset.name} ${variant === "paper" ? "light" : "dark"} design`}
-                              width={asset.width}
-                              height={asset.height}
-                            />
-                          </a>
-                          <figcaption>
-                            <span>{variant === "paper" ? "Paper" : "Ink"}</span>
-                            <div>
-                              <a
-                                href={`${base}/png/${name}.png`}
-                                download
-                                aria-label={`Download ${label} PNG`}
-                              >
-                                PNG <ArrowDown size={14} aria-hidden="true" />
-                              </a>
-                              <a
-                                href={`${base}/svg/${name}.svg`}
-                                download
-                                aria-label={`Download ${label} SVG`}
-                              >
-                                SVG <ArrowDown size={14} aria-hidden="true" />
-                              </a>
-                            </div>
-                          </figcaption>
-                        </figure>
-                      );
-                    })}
+                    {(asset.id === "macos" ? ["muted"] : ["paper", "ink"]).map(
+                      (variant) => {
+                        const base = `/brand/downloads/wallpapers`;
+                        const name = `${asset.id}-${variant}`;
+                        const label = `${asset.name} / ${variant}`;
+                        return (
+                          <figure key={variant}>
+                            <a
+                              href={`${base}/png/${name}.png`}
+                              aria-label={`View ${label}`}
+                            >
+                              <Image
+                                src={`${base}/svg/${name}.svg`}
+                                alt={`Experimental Software ${asset.name} ${variant === "muted" ? "muted gray" : variant === "paper" ? "light" : "dark"} design`}
+                                width={asset.width}
+                                height={asset.height}
+                              />
+                            </a>
+                            <figcaption>
+                              <span>
+                                {variant === "muted"
+                                  ? "Muted"
+                                  : variant === "paper"
+                                    ? "Paper"
+                                    : "Ink"}
+                              </span>
+                              <div>
+                                <a
+                                  href={`${base}/png/${name}.png`}
+                                  download
+                                  aria-label={`Download ${label} PNG`}
+                                >
+                                  PNG <ArrowDown size={14} aria-hidden="true" />
+                                </a>
+                                <a
+                                  href={`${base}/svg/${name}.svg`}
+                                  download
+                                  aria-label={`Download ${label} SVG`}
+                                >
+                                  SVG <ArrowDown size={14} aria-hidden="true" />
+                                </a>
+                              </div>
+                            </figcaption>
+                          </figure>
+                        );
+                      },
+                    )}
                   </div>
                 </div>
               ))}

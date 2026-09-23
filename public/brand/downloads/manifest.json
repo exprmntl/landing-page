@@ -163,13 +163,13 @@
     },
     {
       "file": "covers/x-profile.svg",
-      "bytes": 11969,
-      "sha256": "8fbea050a2cedfd3326d17ebcdc78d4e7e1fdeddb196db5900519a12c2615b1d"
+      "bytes": 17916,
+      "sha256": "946ea88779bfd62ea97db5479bc5586acb9adf015a7d8a91ccbf6e7c781f2e66"
     },
     {
       "file": "covers/x-profile.png",
-      "bytes": 24769,
-      "sha256": "769325b9bdd005112527fbc2f3a8602a701499e681f3fe92d442ba01d9b37bad"
+      "bytes": 31272,
+      "sha256": "8005d12d96a8fd0dc410733deaec74469b1f91c0de94b042c2da634471736e0c"
     },
     {
       "file": "favicons/favicon.svg",
@@ -257,6 +257,16 @@
       "sha256": "bed25ba3c040cce1c9ac684e3af4bf4a1a9b48c22894b0de31c0c08131467d4f"
     },
     {
+      "file": "wallpapers/png/macos-muted.png",
+      "bytes": 317750,
+      "sha256": "244d2a2613705c33ffa6cc0be32a0f75e2cd96d059390acf3f43104ead74f719"
+    },
+    {
+      "file": "wallpapers/svg/macos-muted.svg",
+      "bytes": 8976,
+      "sha256": "229b6dba3904bc2ab7c78abdc00f4cf50d60adc061614b3e245b77dfdfd67201"
+    },
+    {
       "file": "wallpapers/png/linkedin-paper.png",
       "bytes": 33947,
       "sha256": "b94c27e3e4d524d9011164eedbd48c434d8febf656d5b6077ba964c092af5484"
@@ -278,38 +288,38 @@
     },
     {
       "file": "wallpapers/png/x-paper.png",
-      "bytes": 33909,
-      "sha256": "7ed8edfe0ea5c7f8601cd454cab6bf52fa1d9b3d6576b585661bb5b6d38b2ca5"
+      "bytes": 31272,
+      "sha256": "8005d12d96a8fd0dc410733deaec74469b1f91c0de94b042c2da634471736e0c"
     },
     {
       "file": "wallpapers/svg/x-paper.svg",
-      "bytes": 17894,
-      "sha256": "8cd8dff52ea92e3a126b16ae6c5dcff38f2437603c0b442b3425b6c9bcdf8f96"
+      "bytes": 17916,
+      "sha256": "946ea88779bfd62ea97db5479bc5586acb9adf015a7d8a91ccbf6e7c781f2e66"
     },
     {
       "file": "wallpapers/png/x-ink.png",
-      "bytes": 46359,
-      "sha256": "3c9228bbd9b0c98bf626b908230cf7c7af8c5f6d925e04ee226e4c6f15115a34"
+      "bytes": 43896,
+      "sha256": "ba98c20ca0b2f9ebf096e457deb546595ce7b31acddfe2c24ed61836ab631689"
     },
     {
       "file": "wallpapers/svg/x-ink.svg",
-      "bytes": 17894,
-      "sha256": "49c2e42fa8764636d219e6984e196bd691844d51eadf41f3a9d4e505ac683e66"
+      "bytes": 17916,
+      "sha256": "ae2a19e9f299bf07a1a635f61ee36cb984efd0642bc640e9a4c6f177b53101a9"
     },
     {
       "file": "wallpapers/README.md",
-      "bytes": 1370,
-      "sha256": "5e9ab0cb02806c4f808d11e59eb5e63900c6320347847a425342df020b2e71f0"
+      "bytes": 1834,
+      "sha256": "cbaa15ccf672c32ac18509895bd8c172c9308f7f2d9493b4ecc1e9108bfce430"
     },
     {
       "file": "wallpapers/experimental-software-wallpapers-and-banners.zip",
-      "bytes": 286090,
-      "sha256": "2abeaa5d1c191e5fa51cea53f232dd8aa145fc168781ce8bb445373bf7179e9d"
+      "bytes": 311178,
+      "sha256": "db76bded0b6b21163f22d2cba4c5ba1faea5ecc8cc43be62de542f8feb27e682"
     },
     {
       "file": "README.md",
-      "bytes": 3113,
-      "sha256": "34960d9150a2ce801f3fe4b676b71303daa828f1c86ae1bc9c3d3002fd81a4f1"
+      "bytes": 3159,
+      "sha256": "3033b206477f206eb3882cc51896688f9687e5fa4f2cd2836a1ded25e8188379"
     },
     {
       "file": "theme/tokens.json",
