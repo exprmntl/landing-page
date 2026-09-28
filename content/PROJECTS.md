@@ -1,5 +1,6 @@
 # Projects
 
+- [Blink](https://experimental.software/blink) - a design tool that lets Jev assemble components from ShadCN, Material UI, and Ant Design into a UI
 - [Emote](https://useemote.com/) - a reaction API for AI agents, with customizable personalities and reactions
 - [TypeChinese](https://typechinese.io) - Chinese typing practice and typing tests
 - [Orb UI](https://orb-ui.com/) - open-source component library for voice agents
