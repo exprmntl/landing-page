@@ -1,9 +1,9 @@
 # Projects
 
-- [Blink](https://experimental.software/blink) - a design tool that lets Jev assemble components from ShadCN, Material UI, and Ant Design into a UI
 - [Emote](https://useemote.com/) - a reaction API for AI agents, with customizable personalities and reactions
 - [TypeChinese](https://typechinese.io) - Chinese typing practice and typing tests
 - [Orb UI](https://orb-ui.com/) - open-source component library for voice agents
+- [Blink](https://experimental.software/blink) - a design tool that lets Jev assemble components from ShadCN, Material UI, and Ant Design into a UI
 - [badminton.fyi](https://badminton.fyi/) - searchable badminton racket database for specs, prices, and popularity signals
 - [Keyboard Layout Simulator](https://keyboardlayout.app/) - simulate QWERTY, Dvorak and Colemak with typing practice and optional key hints
 - [Flight Currency](https://chromewebstore.google.com/detail/google-flights-currency-s/nameliafoadmpledepdbcgnogcnfiemo) - see Google Flights prices in your local currency

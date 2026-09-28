@@ -16,19 +16,6 @@ export type CatalogProject = {
 // Display order reflects the catalog, not a ranking or an internal maintenance status.
 export const catalog: CatalogProject[] = [
   {
-    id: "blink",
-    name: "Blink",
-    category: "Developer tools",
-    format: "DESIGN TOOL",
-    description:
-      "Let Jev quickly assemble components into a UI, then switch between ShadCN, Material UI, and Ant Design.",
-    href: "https://experimental.software/blink",
-    domain: "experimental.software/blink",
-    newRelease: true,
-    image: "/marketing/projects/blink-social.png",
-    alt: "Blink: A UI, in a blink. A violet dashboard beside the message An idea. Three design systems. Powered by Jev.",
-  },
-  {
     id: "emote",
     name: "Emote",
     category: "Developer tools",
@@ -76,6 +63,19 @@ export const catalog: CatalogProject[] = [
     domain: "orb-ui.com",
     image: "/marketing/projects/orb-ui-artwork/homepage-social.png",
     alt: "Voice agent UI that feels alive: React components for voice agents, beside Orb UI’s cloud orb",
+  },
+  {
+    id: "blink",
+    name: "Blink",
+    category: "Developer tools",
+    format: "DESIGN TOOL",
+    description:
+      "Let Jev quickly assemble components into a UI, then switch between ShadCN, Material UI, and Ant Design.",
+    href: "https://experimental.software/blink",
+    domain: "experimental.software/blink",
+    newRelease: true,
+    image: "/marketing/projects/blink-social.png",
+    alt: "Blink: A UI, in a blink. A violet dashboard beside the message An idea. Three design systems. Powered by Jev.",
   },
   {
     id: "wavelength",
