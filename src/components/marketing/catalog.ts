@@ -87,8 +87,8 @@ export const catalog: CatalogProject[] = [
     href: "https://experimental.software/character",
     domain: "experimental.software/character",
     newRelease: true,
-    image: "/marketing/projects/character-studio.png",
-    alt: "Character Studio showing a disco librarian created from a short prompt, alongside manual customization options",
+    image: "/marketing/projects/character-social.png",
+    alt: "Character Studio: Who’s on your mind? A disco librarian and a podcast guy illustrate instant characters from a vague description, powered by Jev.",
   },
   {
     id: "wavelength",

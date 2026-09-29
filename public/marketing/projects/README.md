@@ -2,7 +2,7 @@
 
 ## Current gallery exports
 
-Character Studio uses `character-studio.png`, a 1200×630 capture of the live app at https://experimental.software/character on September 28, 2026. It shows Jev's actual response to “Disco librarian” and the manual customization controls.
+Character Studio uses `character-social.png`, copied unchanged from the project's 1200×630 `public/social-card.png` on September 29, 2026. The card combines the site logo and typography with actual Jev-selected DiceBear avatars for “Disco librarian” and “Podcast guy.” Editable source and provenance are in the Character Studio repository's `scripts/build-social-card.mjs` and `assets/social/`. The earlier interface capture is preserved as `character-studio.png`.
 
 Blink uses `blink-social.png`, copied unchanged from its approved 1200×630 social image in the Blink repository (`src/app/opengraph-image.png`).
 
