@@ -2,6 +2,8 @@
 
 ## Current gallery exports
 
+Character Studio uses `character-studio.png`, a 1200×630 capture of the live app at https://experimental.software/character on September 28, 2026. It shows Jev's actual response to “Disco librarian” and the manual customization controls.
+
 Blink uses `blink-social.png`, copied unchanged from its approved 1200×630 social image in the Blink repository (`src/app/opengraph-image.png`).
 
 Emote uses `emote-social.png`, copied unchanged from the approved social image at https://useemote.com/social/emote-social-card.png on September 21, 2026. It replaces the Project Epsilon teaser. The 1730×909 source preserves the full composition in the gallery's approximately 1.9:1 slot.

@@ -78,6 +78,19 @@ export const catalog: CatalogProject[] = [
     alt: "Blink: A UI, in a blink. A violet dashboard beside the message An idea. Three design systems. Powered by Jev.",
   },
   {
+    id: "character",
+    name: "Character Studio",
+    category: "Web",
+    format: "WEB APP",
+    description:
+      "Describe a character and let Jev choose the details in a fraction of a second. Customize every option yourself, too.",
+    href: "https://experimental.software/character",
+    domain: "experimental.software/character",
+    newRelease: true,
+    image: "/marketing/projects/character-studio.png",
+    alt: "Character Studio showing a disco librarian created from a short prompt, alongside manual customization options",
+  },
+  {
     id: "wavelength",
     name: "Wavelength",
     category: "Web",
