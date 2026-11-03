@@ -20,7 +20,6 @@ function ProjectCard({
       <div className="gallery-project-visual">
         <div className="gallery-project-topline">
           <span className="direction-label">{project.domain ?? "IN THE LAB"}</span>
-          {project.newRelease && <span className="catalog-new">NEW</span>}
           {project.comingSoon ? (
             <span className="catalog-coming-soon">COMING SOON</span>
           ) : (

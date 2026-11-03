@@ -117,13 +117,6 @@
   flex-wrap: wrap;
   gap: 8px 22px;
 }
-.catalog-home .catalog-new {
-  font: 400 10px/1.5 var(--brand-mono);
-  color: var(--foreground);
-  background: var(--primary);
-  padding: 3px 7px;
-  margin-left: auto;
-}
 .catalog-home .catalog-coming-soon {
   font: 400 10px/1.5 var(--brand-mono);
   color: var(--muted-foreground);
@@ -138,9 +131,6 @@
 .catalog-home .gallery-project-topline > svg {
   margin-left: auto;
   flex-shrink: 0;
-}
-.catalog-home .catalog-new + svg {
-  margin-left: 0;
 }
 .catalog-home .gallery-project-topline {
   min-height: 54px;

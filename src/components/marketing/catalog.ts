@@ -9,24 +9,12 @@ export type CatalogProject = {
   image: string;
   alt: string;
 } & (
-  | { comingSoon: true; href?: never; domain?: never; newRelease?: never }
-  | { comingSoon?: false; href: string; domain: string; newRelease?: boolean }
+  | { comingSoon: true; href?: never; domain?: never }
+  | { comingSoon?: false; href: string; domain: string }
 );
 
 // Display order reflects the catalog, not a ranking or an internal maintenance status.
 export const catalog: CatalogProject[] = [
-  {
-    id: "emote",
-    name: "Emote",
-    category: "Developer tools",
-    format: "API",
-    description: "Let your AI agent react to messages. You choose its personality and the reactions it can use.",
-    href: "https://useemote.com/",
-    domain: "useemote.com",
-    newRelease: true,
-    image: "/marketing/projects/emote-social.png",
-    alt: "Emote: The reaction API for AI agents, beside a chat message saying That worked! with a celebration reaction",
-  },
   {
     id: "typechinese",
     name: "TypeChinese",
@@ -64,6 +52,28 @@ export const catalog: CatalogProject[] = [
     alt: "Voice agent UI that feels alive: React components for voice agents, beside Orb UI’s cloud orb",
   },
   {
+    id: "keyboard",
+    name: "Keyboard Layout Simulator",
+    category: "Web",
+    format: "WEB TOOL",
+    description: "Try QWERTY, Dvorak and Colemak in your browser, with typing practice and optional key hints.",
+    href: "https://keyboardlayout.app/",
+    domain: "keyboardlayout.app",
+    image: "/marketing/projects/keyboard-social.png",
+    alt: "Try a different way to type: QWERTY, Dvorak and Colemak, with ivory, charcoal and orange Q, D and C keycaps",
+  },
+  {
+    id: "emote",
+    name: "Emote",
+    category: "Developer tools",
+    format: "API",
+    description: "Let your AI agent react to messages. You choose its personality and the reactions it can use.",
+    href: "https://useemote.com/",
+    domain: "useemote.com",
+    image: "/marketing/projects/emote-social.png",
+    alt: "Emote: The reaction API for AI agents, beside a chat message saying That worked! with a celebration reaction",
+  },
+  {
     id: "blink",
     name: "Blink",
     category: "Developer tools",
@@ -72,7 +82,6 @@ export const catalog: CatalogProject[] = [
       "Let Jev quickly assemble components into a UI, then switch between ShadCN, Material UI, and Ant Design.",
     href: "https://experimental.software/blink",
     domain: "experimental.software/blink",
-    newRelease: true,
     image: "/marketing/projects/blink-social.png",
     alt: "Blink: A UI, in a blink. A violet dashboard beside the message An idea. Three design systems. Powered by Jev.",
   },
@@ -85,7 +94,6 @@ export const catalog: CatalogProject[] = [
       "Describe a character and let Jev choose the details in a fraction of a second. Customize every option yourself, too.",
     href: "https://experimental.software/character",
     domain: "experimental.software/character",
-    newRelease: true,
     image: "/marketing/projects/character-social.png",
     alt: "Character Studio: Who’s on your mind? A disco librarian and a podcast guy illustrate instant characters from a vague description, powered by Jev.",
   },
@@ -100,17 +108,6 @@ export const catalog: CatalogProject[] = [
     domain: "experimental.software",
     image: "/marketing/projects/wavelength.webp",
     alt: "Wavelength’s colorful dial alongside the question: Are you on the same wavelength as AI?",
-  },
-  {
-    id: "keyboard",
-    name: "Keyboard Layout Simulator",
-    category: "Web",
-    format: "WEB TOOL",
-    description: "Try QWERTY, Dvorak and Colemak in your browser, with typing practice and optional key hints.",
-    href: "https://keyboardlayout.app/",
-    domain: "keyboardlayout.app",
-    image: "/marketing/projects/keyboard-social.png",
-    alt: "Try a different way to type: QWERTY, Dvorak and Colemak, with ivory, charcoal and orange Q, D and C keycaps",
   },
   {
     id: "flights-currency",
