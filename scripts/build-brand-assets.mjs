@@ -305,10 +305,12 @@ await writeFile("public/social.png", files["social/experimental-software.png"]);
 
 // Preserve the approved wallpaper masters byte-for-byte in both download kits.
 const wallpaperFiles = {};
-for (const kind of ["iphone", "iphone-home", "macos", "linkedin", "x"]) {
-  for (const variant of kind === "macos"
-    ? ["paper", "ink", "muted"]
-    : ["paper", "ink"]) {
+for (const kind of ["iphone", "iphone-home", "macos", "macos-air", "linkedin", "x"]) {
+  for (const variant of kind === "macos-air"
+    ? ["muted"]
+    : kind === "macos"
+      ? ["paper", "ink", "muted"]
+      : ["paper", "ink"]) {
     for (const format of ["png", "svg"]) {
       const name = `${format}/${kind}-${variant}.${format}`;
       const bytes = await readFile(join(output, "wallpapers", name));
@@ -346,7 +348,7 @@ Reference: https://experimental.software/brand
 - covers/: centered 1500 × 600 Notion cover, 1128 × 191 LinkedIn company banner, and 1500 × 500 X profile header, SVG + PNG. Keep cover positioning centered; social banners reserve space for overlapping avatars.
 - templates/: 1280 × 640 repository cover layout, SVG + PNG. “Project name” is a placeholder, not a launched product. Regenerate from the source script with the actual name and description.
 - theme/: CSS and JSON design tokens.
-- wallpapers/: iPhone Lock Screen and Home Screen (1320 × 2868), muted macOS (5120 × 2880), personal LinkedIn (1584 × 396), and X (1500 × 500) designs. Includes the original paper/ink Mac wallpapers (3840 × 2400). PNG + outlined SVG, with a separate ZIP and usage notes.
+- wallpapers/: iPhone Lock Screen and Home Screen (1320 × 2868), muted macOS for 16:9 monitors (5120 × 2880) and the 13-inch MacBook Air (2560 × 1664, 20:13), personal LinkedIn (1584 × 396), and X (1500 × 500) designs. Includes the original paper/ink Mac wallpapers (3840 × 2400). PNG + outlined SVG, with a separate ZIP and usage notes.
 - font-notes.txt and font-licenses/: font setup and license information. Font files are not included.
 - manifest.json: SHA-256 checksums for the exported files.
 

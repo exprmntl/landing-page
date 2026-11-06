@@ -471,7 +471,16 @@ export default function BrandPage() {
                   name: "macOS",
                   width: 5120,
                   height: 2880,
-                  note: "A muted gray desktop with corner branding, sized for 5K, 16:9 displays.",
+                  aspectRatio: "16:9",
+                  note: "A muted gray desktop with corner branding, sized for 16:9 monitors up to 5K.",
+                },
+                {
+                  id: "macos-air",
+                  name: "MacBook Air (13-inch)",
+                  width: 2560,
+                  height: 1664,
+                  aspectRatio: "20:13",
+                  note: "Sized for the built-in display, with equal padding at the sides and bottom. Choose the wallpaper that matches each display’s aspect ratio.",
                 },
                 {
                   id: "linkedin",
@@ -492,14 +501,15 @@ export default function BrandPage() {
                   <div className="brand-wallpaper-heading">
                     <h3>{asset.name}</h3>
                     <span className="brand-eyebrow">
+                      {asset.aspectRatio && `${asset.aspectRatio} · `}
                       {asset.width} × {asset.height}
                     </span>
                   </div>
                   <p>{asset.note}</p>
                   <div
-                    className={`brand-wallpaper-pair${asset.id.startsWith("iphone") ? " brand-wallpaper-phones" : ""}${asset.id === "macos" ? " brand-wallpaper-single" : ""}`}
+                    className={`brand-wallpaper-pair${asset.id.startsWith("iphone") ? " brand-wallpaper-phones" : ""}${asset.id.startsWith("macos") ? " brand-wallpaper-single" : ""}`}
                   >
-                    {(asset.id === "macos" ? ["muted"] : ["paper", "ink"]).map(
+                    {(asset.id.startsWith("macos") ? ["muted"] : ["paper", "ink"]).map(
                       (variant) => {
                         const base = `/brand/downloads/wallpapers`;
                         const name = `${asset.id}-${variant}`;
