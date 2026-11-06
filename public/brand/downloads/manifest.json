@@ -267,6 +267,16 @@
       "sha256": "229b6dba3904bc2ab7c78abdc00f4cf50d60adc061614b3e245b77dfdfd67201"
     },
     {
+      "file": "wallpapers/png/macos-air-muted.png",
+      "bytes": 28723,
+      "sha256": "c28af00a1b99b92663b6fb6a706b91ba7d8a73b7a41d42b2b8b7a4d9bca9d907"
+    },
+    {
+      "file": "wallpapers/svg/macos-air-muted.svg",
+      "bytes": 9097,
+      "sha256": "7adc303abd5487bde95d25d7199d3e93064467731c01059732accbb2bde81550"
+    },
+    {
       "file": "wallpapers/png/linkedin-paper.png",
       "bytes": 33947,
       "sha256": "b94c27e3e4d524d9011164eedbd48c434d8febf656d5b6077ba964c092af5484"
@@ -308,18 +318,18 @@
     },
     {
       "file": "wallpapers/README.md",
-      "bytes": 1834,
-      "sha256": "cbaa15ccf672c32ac18509895bd8c172c9308f7f2d9493b4ecc1e9108bfce430"
+      "bytes": 2209,
+      "sha256": "456de1b586be53e0639c1008a599692477c334f8946accf9feb68991ee235410"
     },
     {
       "file": "wallpapers/experimental-software-wallpapers-and-banners.zip",
-      "bytes": 311178,
-      "sha256": "db76bded0b6b21163f22d2cba4c5ba1faea5ecc8cc43be62de542f8feb27e682"
+      "bytes": 323556,
+      "sha256": "ed5a3df6df449a017eba0cd3c13c595738155cec0dd37faa33ad5e6468a09c0a"
     },
     {
       "file": "README.md",
-      "bytes": 3159,
-      "sha256": "3033b206477f206eb3882cc51896688f9687e5fa4f2cd2836a1ded25e8188379"
+      "bytes": 3227,
+      "sha256": "5b4f11afd65c1c0b37e02c45bd189cdbf12d17e535540fc607cb0730e9dd4a23"
     },
     {
       "file": "theme/tokens.json",
